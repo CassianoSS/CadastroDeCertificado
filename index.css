@@ -1,0 +1,12 @@
+*{
+    background-color: lightgray;
+
+}
+
+.myCard, .col, .row, h2{
+    background-color: whitesmoke !important;
+    height: 60%;
+    margin: 10%;
+    border: 0ch;
+    border-radius: 20px;    
+}
