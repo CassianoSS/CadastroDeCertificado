@@ -21,7 +21,31 @@
                     <div id="chooseTab2" class="chooseTabs" onclick="formController.clickChoice('chooseTab2')"><p>Social</p></div>
                     <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')"><p>Certificates</p></div>
                 </div>
-                <div class="card-inputs"></div>
+                <div class="card-inputs"> 
+                    <fieldset>
+                        <legend class="dados">Dados Básicos</legend>
+            
+                        <label for="n1">Nome Completo</label><br>
+                        <input type="text" id="n1" class="input-padrao" required><br>
+            
+                        <label for="nk">Nickname</label><br>
+                        <input type="text" id="nk" class="input-padrao" required><br>
+            
+                        <label for="email">E-mail</label><br>
+                        <input type="text" id="email" class="input-padrao" required><br>
+            
+                        <label for="tel">Telefone</label><br>
+                        <input type="text" id="tel" class="input-padrao" required><br>
+            
+                        <label for="dn">Data de Nascimento</label><br>
+                        <input type="text" id="dn" class="input-padrao" required><br>
+            
+                        <label for="idade">Idade</label><br>
+                        <input type="text" id="idade" class="input-padrao" required><br>
+            
+                        <label class="checkbox"><input type="checkbox" required>Eu li e aceito os termos de privacidade</label>
+                    </fieldset>
+                </div>
                 <div id="footerForm">
                     <button id="btnNext" onclick="formController.nextForm()" class="btnDefault">
                         Next
