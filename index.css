@@ -1,4 +1,5 @@
 *{
+<<<<<<< HEAD
 font-family: Nunito, sans-serif;
 padding: 0;
 margin:0;
@@ -32,11 +33,13 @@ h4{
     padding:45px
   
 }
+=======
+    background-color: lightgray;
+>>>>>>> parent of f1cbde8... feat: criado o card principal, o botão next e delimitado os espaços
 
-.form-card h4{
-  font-size: 24px;  
 }
 
+<<<<<<< HEAD
 .tabs{
     display: flex;
     flex-flow: row;
@@ -119,4 +122,12 @@ margin-top: 10px;
 }
 
 
+=======
+.myCard, .col, .row, h2{
+    background-color: whitesmoke !important;
+    height: 60%;
+    margin: 10%;
+    border: 0ch;
+    border-radius: 20px;    
+>>>>>>> parent of f1cbde8... feat: criado o card principal, o botão next e delimitado os espaços
 }
