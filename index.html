@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8">
@@ -16,11 +16,29 @@
    <div class="subbody">
        <div class="form-card">
             <h4>Team Sign Up</h4>
-                <div class="tabs"></div>
+                <div class="tabs">
+                    <div id="chooseTab1" class="chooseTabs choose" onclick="formController.clickChoice('chooseTab1')"><p>Basic</p></div>
+                    <div id="chooseTab2" class="chooseTabs" onclick="formController.clickChoice('chooseTab2')"><p>Social</p></div>
+                    <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')"><p>Certificates</p></div>
+                </div>
                 <div class="card-inputs"></div>
-                <input type="submit"  id="next-button" value="Next >">
+                <div id="footerForm">
+                    <button id="btnNext" onclick="formController.nextForm()" class="btnDefault">
+                        Next
+                        <img src="assets/icons/Trailing Icon.svg" alt="Flecha de seguir">
+                    </button>
+                    <button id="btnFinish" onclick="formController.finishForm()" class="btnDefault displayNone">
+                        <img src="assets/icons/Leading Icon.svg" alt="Check de confirmação">
+                        Finish
+                    </button>
+                </div>
+                <!-- <input type="submit"  id="next-button" value="Next >"> -->
            </div><!--form-card-->
    </div>
+   <script src="js/controller/FormsController.js"></script>
+    <script>
+        var formController = new FormsController();
+    </script>
 </body>
 
 </html>
