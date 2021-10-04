@@ -22,41 +22,41 @@
                     <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')"><p>Certificates</p></div>
                 </div>
                 <div class="card-inputs"> 
-                    <fieldset>
+                    <fieldset class="grupo">
                         <legend class="dados">Dados Básicos</legend>
             
-                        <label for="n1">Nome Completo</label><br>
+                        <label for="n1"><strong>Nome Completo</strong></label><br>
                         <input type="text" id="n1" class="input-padrao" required><br>
             
-                        <label for="nk">Nickname</label><br>
+                        <label for="nk"><strong>Nickname</strong></label><br>
                         <input type="text" id="nk" class="input-padrao" required><br>
             
-                        <label for="email">E-mail</label><br>
-                        <input type="text" id="email" class="input-padrao" required><br>
+                        <label for="email"><strong>E-mail</strong></label><br>
+                        <input type="email" id="email" class="input-padrao" required><br>
             
-                        <label for="tel">Telefone</label><br>
+                        <label for="tel"><strong>Telefone</strong></label><br>
                         <input type="text" id="tel" class="input-padrao" required><br>
             
-                        <label for="dn">Data de Nascimento</label><br>
-                        <input type="text" id="dn" class="input-padrao" required><br>
+                        <label for="dn"><strong>Data de Nascimento</strong></label><br>
+                        <input type="date" name="dta-base" id="dn" class="inputUser" required><br>
             
-                        <label for="idade">Idade</label><br>
+                        <label for="idade"><strong>Idade</strong></label><br>
                         <input type="text" id="idade" class="input-padrao" required><br>
             
                         <label class="checkbox"><input type="checkbox" required>Eu li e aceito os termos de privacidade</label>
                     </fieldset>
-                    <div>
-                        <fieldset>
-                            <legend id="midias">Mídias Socias</legend>
+                </div> 
+                   <div class="card-inputs">
+                        <fieldset class="grupo">
+                            <legend id="midias"><strong>Mídias Socias</strong></legend>
             
-                            <label for="linkedin">Linkedin</label><br>
+                            <label for="linkedin"><strong>Linkedin</strong></label><br>
                             <input type="text" id="linkedin" class="input-padrao" required><br>
             
-                            <label for="github">GitHub</label><br>
+                            <label for="github"><strong>GitHub</strong></label><br>
                             <input type="text" id="github" class="input-padrao" required><br>
-                        </fieldset>
-                    </div>
-                </div>
+                        </fieldset>      
+                   </div>
                 <div id="footerForm">
                     <button id="btnNext" onclick="formController.nextForm()" class="btnDefault">
                         Next
