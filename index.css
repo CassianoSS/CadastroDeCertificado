@@ -1,101 +1,99 @@
-*{
-    font-family: Nunito, sans-serif;
-    padding: 0;
-    margin:0;
-    border:0;
-    outline: none;
-    box-sizing:border-box;
-    }
-    
-    h4{
-        font-size: 24px;
-        font-family: Inter;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .subbody{
-        background-color: #ECEEF2;
-        width: 100%;
-        height: 1000px;
-        padding-top: 130px;
-    }
-    
-    .form-card{
-        max-width: 617px;
-        max-height: 763px;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        margin:auto;
-        border-radius:20px;
-        padding:45px
-      
-    }
-    
-    .form-card h4{
-      font-size: 24px;  
-    }
-    
-    .tabs{
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        height: 48px;  
-        width: 100%;
-        margin-top: 30px;
-    }
-    
-    .chooseTabs{
-        height: 48px;
-        width: 33.33%;
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        justify-content: center;
-        font-size: 16px;
-        font-family: Nunito;
-        border-bottom: solid 2px #AAA;
-        cursor: pointer;
-    }
-    .choose{
-        transition: border 0.5s, color 0.5s;
-        color: #074EE8;
-        border-bottom: solid 3px #074EE8;
-    }
-    
-    .card-inputs{
-    background-color: tomato;
-    width: 100%;
-    height: 506px;
-    
-    }
-    
-    #footerForm{
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 45px 0;
-    }
-    .btnDefault{
-        display: flex;
-        align-items: center;
-        background-color: #074EE8;
-        font-size: 16px;
-        font-family: Nunito;
-        color: #FFF;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .btnDefault:active{
-        background-color: #0e42b1;
-    }
-    .displayNone{
-        display: none;
-    }
-    
-    /* #next-button{
+* {
+  font-family: Nunito, sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subbody {
+  background-color: #eceef2;
+  width: 100%;
+  height: 1000px;
+  padding-top: 130px;
+}
+
+.form-card {
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.form-card h4 {
+  font-size: 18px;
+}
+
+.tabs {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.chooseTabs {
+  height: 48px;
+  width: 33.33%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Nunito;
+  border-bottom: solid 2px #aaa;
+  cursor: pointer;
+}
+.choose {
+  transition: border 0.5s, color 0.5s;
+  color: #074ee8;
+  border-bottom: solid 3px #074ee8;
+}
+
+.card-inputs {
+  background-color: tomato;
+  width: 100%;
+  height: 506px;
+}
+
+#footerForm {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 45px 0;
+}
+.btnDefault {
+  display: flex;
+  align-items: center;
+  background-color: #074ee8;
+  font-size: 16px;
+  font-family: Nunito;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnDefault:active {
+  background-color: #0e42b1;
+}
+.displayNone {
+  display: none;
+}
+
+/* #next-button{
     width: 82px;
     height: 40px;
     background-color:#074EE8;
@@ -107,16 +105,59 @@
     float:right;
     margin-top: 10px;
     } */
-    
-    @media only screen and (max-width: 655px){
-    .form-card{
-    
-        
-        width: 95%;
-        margin:auto;
-        padding: 22px;
-    
-    }
-    
-    
-    }
+
+.modal-certificates {
+  display: none;
+  z-index: 1;
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.modal-certificates p {
+  font-size: 14px;
+  color: #767676;
+}
+
+.formbox {
+  margin: 40px 0;
+}
+
+.input {
+  font-size: 16px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.heart {
+  float: right;
+  margin: -28px 10px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.modal-certificates h4 {
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+#backbutton {
+  float: right;
+  margin-top: 55px;
+}
+
+@media only screen and (max-width: 655px) {
+  .form-card {
+    width: 95%;
+    margin: auto;
+    padding: 22px;
+  }
+}
