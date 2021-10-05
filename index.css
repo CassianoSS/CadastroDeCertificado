@@ -1,165 +1,355 @@
-*{
-    font-family: Nunito, sans-serif;
-    padding: 0;
-    margin:0;
-    border:0;
-    outline: none;
-    box-sizing:border-box;
-    }
+* {
+  font-family: Nunito, sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subbody {
+  background-color: #eceef2;
+  width: 100%;
+  height: 1000px;
+  padding-top: 130px;
+}
     
-    h4{
-        font-size: 24px;
-        font-family: Inter;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .subbody{
-        background-color: #ECEEF2;
-        width: 100%;
-        height: 1000px;
-        padding-top: 130px;
-    }
-    
-    .form-card{
-        max-width: 617px;
-        max-height: 763px;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        margin:auto;
-        border-radius:20px;
-        padding:45px
-      
-    }
-    
-    .form-card h4{
-      font-size: 24px;  
-    }
-    
-    .tabs{
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        height: 48px;  
-        width: 100%;
-        margin-top: 30px;
-    }
-    
-    .chooseTabs{
-        height: 48px;
-        width: 33.33%;
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        justify-content: center;
-        font-size: 16px;
-        font-family: Nunito;
-        border-bottom: solid 2px #AAA;
-        cursor: pointer;
-    }
-    .choose{
-        transition: border 0.5s, color 0.5s;
-        color: #074EE8;
-        border-bottom: solid 3px #074EE8;
-    }
-    
-    .card-inputs{
-    background-color: tomato;
+.form-card{
+    max-width: 617px;
+    max-height: 763px;
     width: 100%;
-    height: 506px; 
-    margin-bottom: 1em;
-    }
+    height: 100%;
+    background-color: white;
+    margin:auto;
+    border-radius:20px;
+    padding:45px
 
-    .cards-inputs label{
-        margin-bottom: 0.2em; 
-        display:block;
-    } 
+}
 
-    .card-inputs input [type="text"], .cards-inputs [type="email"]{
-        padding: 0.2em; 
-        border: 1px solid tomato;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
-        display: block;
-    }
-    
-    #footerForm{
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 45px 0;
-    }
-    .btnDefault{
-        display: flex;
-        align-items: center;
-        background-color: #074EE8;
-        font-size: 16px;
-        font-family: Nunito;
-        color: #FFF;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .btnDefault:active{
-        background-color: #0e42b1;
-    }
-    .displayNone{
-        display: none;
-    }
-    
-    /* #next-button{
-    width: 82px;
-    height: 40px;
-    background-color:#074EE8;
-    border-radius: 4px;
-    color: white;
-    font-family: Nunito, sans-serif;
+.form-card h4{
+  font-size: 24px;  
+}
+
+.aviso{
+    font-size: 12px;
+    color: #FFF;/*TODO: Trocar cor quando mudar o fundo*/
+}
+
+.card-inputs{
+background-color: tomato;
+width: 100%;
+height: 506px; 
+margin-bottom: 1em;
+} 
+
+.nome, .nickname{
+    width:515px;
+    height: 16px; 
+    top: -20px; 
+    font-family: Nunito; 
+    font-style: normal; 
+    font-size: 14px; 
+    line-height: 16px; 
+    font-weight: 400;
+} 
+
+#n1 {
+    width: 515px; 
+    height: 40px; 
+    top: 496px; 
+    left: 236px; 
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);  
+} 
+
+#nk{
+    width: 515px;
+    height: 40px; 
+    top: 584px; 
+    left: 236px; 
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.email{
+    width: 330px; 
+    height: 16px; 
+    top: -20px;
+    font-family: Nunito; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-weight: 400; 
+    line-height: 16px;
+}
+
+.telefone{
+    width: 162px;
+    height: 16px; 
+    top: -20px; 
+    font-family: Nunito; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-weight: 400;
+    line-height: 16px;
+} 
+
+#tel{
+    width: 162px; 
+    height: 40px; 
+    top: 672px; 
+    left: 589px; 
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+} 
+
+.data{
+    width: 503px; 
+    height: 16px; 
+    top: 745px; 
+    left: 236px; 
+    font-family: Nunito; 
+    font-weight: 400; 
+    font-size: 18px; 
+    font-style: normal;
+    line-height: 16px;
+} 
+
+.age{
+    width: 101px;
+    height: 16px;
+    top: -20px; 
+    font-family: Nunito; 
+    font-size: 14px; 
+    font-style: normal; 
+    font-weight: 400; 
+    line-height: 16px;
+} 
+
+#idade{
+    width: 101px; 
+    height: 40px; 
+    top: 794px; 
+    left: 650px; 
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+} 
+
+.checkbox{
+    width: 12px; 
+    height: 9.42px; 
+    top: 5.58px; 
+    left: 3.99px; 
+} 
+
+#frase{
+    width: 214px; 
+    height: 18px; 
+    top: 4px; 
+    left: 32px; 
+    font-family: Nunito;
+    font-size: 16px; 
+    font-weight: 400; 
+    font-style: normal; 
+    line-height: 18px; 
+} 
+
+.linkedin, .github{
+    width: 503px;
+    height: 16px;
+    top: -20px; 
+    font-family: Nunito; 
+    font-weight: 400; 
+    font-style: normal; 
+    font-size: 14px; 
+    line-height: 16px;
+} 
+
+#linkedin{
+    width: 503px;
+    height: 40px; 
+    top: 496px; 
+    left: 236px; 
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+} 
+
+#github{ 
+    width: 503px; 
+    height: 40px; 
+    top: 593px; 
+    left: 236px;
+    border-radius: 4px; 
+    border: 2px solid tomato;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.title{
+    width: 515px;
+    height: 48px;
+    top: 391px; 
+    left: 236px; 
+}
+
+#footerForm{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 45px 0;
+}
+.btnDefault{
+    display: flex;
+    align-items: center;
+    background-color: #074EE8;
     font-size: 16px;
-    bottom: 0;
-    float:right;
-    margin-top: 10px;
-    } */
+    font-family: Nunito;
+    color: #FFF;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btnDefault:active{
+    background-color: #0e42b1;
+}
+.displayNone{
+    display: none;
+}
+  
+.form-card {
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
 
-    .aviso{
-        font-size: 12px;
-        color: #FFF;/*TODO: Trocar cor quando mudar o fundo*/
-    }
-    
-    @media only screen and (max-width: 655px){
-    .form-card{
-    
-        
-        width: 95%;
-        margin:auto;
-        padding: 22px;
-    
-    }
-    
-    
-    } 
+.form-card h4 {
+  font-size: 18px;
+}
 
-    fieldset{
-        border: 0;
-    } 
-    
-    fieldset.grupo.card-inputs{ 
-        float:left;
-        margin-right: 1em;
-    }
+.tabs {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  margin-top: 30px;
+}
 
-    .card-inputs input{
+.chooseTabs {
+  height: 48px;
+  width: 33.33%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Nunito;
+  border-bottom: solid 2px #aaa;
+  cursor: pointer;
+}
+.choose {
+  transition: border 0.5s, color 0.5s;
+  color: #074ee8;
+  border-bottom: solid 3px #074ee8;
+}
 
-    }
+.card-inputs {
+  background-color: tomato;
+  width: 100%;
+  height: 506px;
+}
 
-    body{
-        font-family: sans-serif; 
-        font-size: 1em; 
-        margin-left: 36%; 
-        margin-top: 2%; 
-        justify-content: center;
-    } 
+#footerForm {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 45px 0;
+}
+.btnDefault {
+  display: flex;
+  align-items: center;
+  background-color: #074ee8;
+  font-size: 16px;
+  font-family: Nunito;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnDefault:active {
+  background-color: #0e42b1;
+}
+.displayNone {
+  display: none;
+}
 
-    input{
-      border-radius: 5px; 
+.modal-certificates {
+  display: none;
+  z-index: 1;
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
 
-    }
+.modal-certificates p {
+  font-size: 14px;
+  color: #767676;
+}
+
+.formbox {
+  margin: 40px 0;
+}
+
+.input {
+  font-size: 16px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.heart {
+  float: right;
+  margin: -28px 10px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.modal-certificates h4 {
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+#backbutton {
+  float: right;
+  margin-top: 55px;
+}
+
+@media only screen and (max-width: 655px) {
+  .form-card {
+    width: 95%;
+    margin: auto;
+    padding: 22px;
+  }
+}

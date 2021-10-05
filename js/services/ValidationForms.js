@@ -15,7 +15,7 @@ function validationForm1(){
         val: verificaString(item.value, ' '),
         warning: 'Seu nome precisa estar completo!',
       },
-      nick: {
+      nickname: {
         val:item.value.indexOf(' ') === -1,
         warning: 'Seu nickname não pode conter espaços em branco!',
       },
@@ -35,12 +35,12 @@ function validationForm1(){
         val:!isNaN(item.value),
         warning: 'Digite a idade corretamente, apenas números!',
       },
-      termo: {
+      termos: {
         val:item.checked,
         warning: 'Precisamos que você aceite os termos!',
       },
     }
-    if(!validateItem(item, validations[item.id])){ //Testa cada item na função de validação
+    if(!validateItem(item, validations[item.name])){ //Testa cada item na função de validação
       flag = false; //Caso falhe em algum campo, altera para false a variável de retorno da função
     }
   });
@@ -54,7 +54,7 @@ function validateItem(item, validation){ //Função que valida os campos
     if(item.value !== ''){ //Testa se está preenchido
     } else { //No caso do campo não ser preenchido o aviso é de que o campo é obrigatório
       if($(`#${item.id}`).nextElementSibling.classList.value !== 'aviso'){
-        item.insertAdjacentHTML('afterend', `<p class='aviso'>Campo ${item.id} obrigatório</p>`);
+        item.insertAdjacentHTML('afterend', `<p class='aviso'>Campo ${item.name} obrigatório</p>`);
       }
       return false;
     }
@@ -88,7 +88,7 @@ function verificaString(word, ...character){ //Função que testa uma string com
 }
 
 function correcaoDoDado(params){ // É chamado toda vez que um campo é alterado no HTML
-  if(params === 'termo'){ //Tratamento diferente para o campo checkbox
+  if(params === 'frase'){ //Tratamento diferente para o campo checkbox
     if($(`#${params}`).nextElementSibling.nextElementSibling !== null){
       $(`#${params}`).nextElementSibling.nextElementSibling.remove(); //Após a mudança no campo remove esse aviso
     }
