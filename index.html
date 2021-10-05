@@ -26,24 +26,27 @@
                         <legend class="dados">Dados Básicos</legend>
             
                         <label for="n1"><strong>Nome Completo</strong></label><br>
-                        <input type="text" id="n1" class="input-padrao" onchange="correcaoDoDado()" required><br>
+                        <input type="text" id="nome" class="input-padrao input-tab1" onchange="correcaoDoDado('nome')" required><br>
             
                         <label for="nk"><strong>Nickname</strong></label><br>
-                        <input type="text" id="nk" class="input-padrao" onchange="correcaoDoDado()" required><br>
+                        <input type="text" id="nick" class="input-padrao input-tab1" onchange="correcaoDoDado('nick')" required><br>
             
                         <label for="email"><strong>E-mail</strong></label><br>
-                        <input type="email" id="email" class="input-padrao" onchange="correcaoDoDado()" required><br>
+                        <input type="email" id="email" class="input-padrao input-tab1" onchange="correcaoDoDado('email')" required><br>
             
                         <label for="tel"><strong>Telefone</strong></label><br>
-                        <input type="text" id="tel" class="input-padrao" onchange="correcaoDoDado()" required><br>
+                        <input type="text" id="telefone" class="input-padrao input-tab1" onchange="correcaoDoDado('telefone')" required><br>
             
                         <label for="dn"><strong>Data de Nascimento</strong></label><br>
-                        <input type="date" name="dta-base" id="dn" class="inputUser" onchange="correcaoDoDado()" required><br>
+                        <input type="date" name="data-base" id="data" class="inputUser input-tab1" onchange="correcaoDoDado('data')" required><br>
             
                         <label for="idade"><strong>Idade</strong></label><br>
-                        <input type="text" id="idade" class="input-padrao" onchange="correcaoDoDado()" required><br>
+                        <input type="text" id="idade" class="input-padrao input-tab1" onchange="correcaoDoDado('idade')" required><br>
             
-                        <label class="checkbox"><input type="checkbox" id="checkboxTermos" onchange="correcaoDoDado()" required>Eu li e aceito os termos de privacidade</label>
+                        <label class="checkbox">
+                            <input type="checkbox" class="input-tab1" id="termo" onchange="correcaoDoDado('termo')" required/>
+                            Eu li e aceito os termos de privacidade<br>
+                        </label>
                     </fieldset>
                 </div> 
                    <div class="card-inputs">

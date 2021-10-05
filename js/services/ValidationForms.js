@@ -3,61 +3,79 @@ Implementar aqui as três funções de validação (form 1, 2 e 3).
 Essas serão chamadas no FormsController.js a cada clique dos botões.
 */
 var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 
 function validationForm1(){
-  let inputName = $('#n1'); //Encontra os inputs da tab1
-  let inputNick = $('#nk');
-  let inputEmail = $('#email');
-  let inputTel = $('#tel');
-  let inputNasc = $('#dn');
-  let inputIdade = $('#idade');
-  let checkboxTermos = $('#checkboxTermos');
-  if(inputName.value !== '' && verificaString(inputName.value, ' ')){ //Testa se o nome foi preenchido e se tem espaço
-    if (inputNick.value !== '' && inputNick.value.indexOf(' ') === -1) { //Testa se o nickName foi preenchido e não tem espaço em branco
-      if (inputEmail.value !== '' && verificaString(inputEmail.value, '@', '.com')) { //Testa se o Email foi preenchido e contém @ e .com
-        if (inputTel.value !== '' && !isNaN(inputTel.value.split(' ', '-').join(''))) { //Testa se o telefone foi preenchido e se tem apenas números
-          if (inputNasc.value !== '' && !isNaN(inputNasc.value.split('-').join(''))) { //Testa se a data de nascimento foi preenchida corretamente
-            if (inputIdade.value !== '' && !isNaN(inputIdade.value.split(' ').join(''))) { //Testa se a idade foi preenchida e se têm apenas número
-              if(checkboxTermos.checked){ //Testa se os termos foram aceitos
-                return true; // A função validaForm1 só retorna true se passar pela verificação de cada campo do formulário
-              } else {
-                checkboxTermos.focus();
-                checkboxTermos.insertAdjacentHTML('beforebegin', "<p class='aviso'>Você precisa aceitar os termos</p>");
-                return false;
-              }
-            } else {
-              inputIdade.focus();
-              inputIdade.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o nome corretamente</p>");
-              return false;
-            }
-          } else {
-            inputNasc.focus();
-            inputNasc.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o nascimento corretamente</p>");
-            return false;
-          }
-        } else {
-          inputTel.focus();
-          inputTel.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o telefone corretamente</p>");
-          return false;
-        }
-      } else {
-        inputEmail.focus();
-        inputEmail.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o email corretamente</p>");
-        return false;
+  let validationItems = $$('.input-tab1'); //Seleciona todos os inputs da tab1
+  let flag = true; // Flag de retorno da função
+
+  validationItems.forEach((item) => {
+    let validations = { //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
+      nome: {
+        val: verificaString(item.value, ' '),
+        warning: 'Seu nome precisa estar completo!',
+      },
+      nick: {
+        val:item.value.indexOf(' ') === -1,
+        warning: 'Seu nickname não pode conter espaços em branco!',
+      },
+      email: {
+        val:verificaString(item.value, '@', '.com'),
+        warning: 'Seu e-mail não parece válido!',
+      },
+      telefone: {
+        val:!isNaN(item.value.split(' ').join('')),
+        warning: 'Seu telefone deve conter apenas números!',
+      },
+      data: {
+        val:!isNaN(item.value.split('-').join('')),
+        warning: 'Sua data de nascimento não parece válida!',
+      },
+      idade: {
+        val:!isNaN(item.value),
+        warning: 'Digite a idade corretamente, apenas números!',
+      },
+      termo: {
+        val:item.checked,
+        warning: 'Precisamos que você aceite os termos!',
+      },
+    }
+    if(!validateItem(item, validations[item.id])){ //Testa cada item na função de validação
+      flag = false; //Caso falhe em algum campo, altera para false a variável de retorno da função
+    }
+  });
+  return flag;
+}
+
+//TODO:(Matheus Santos) Implementar validação do tab2 aqui
+
+function validateItem(item, validation){ //Função que valida os campos
+  if(item.required){ //Se o item for obrigatório
+    if(item.value !== ''){ //Testa se está preenchido
+    } else { //No caso do campo não ser preenchido o aviso é de que o campo é obrigatório
+      if($(`#${item.id}`).nextElementSibling.classList.value !== 'aviso'){
+        item.insertAdjacentHTML('afterend', `<p class='aviso'>Campo ${item.id} obrigatório</p>`);
       }
-    } else {
-      inputNick.focus();
-      inputNick.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o NickName corretamente</p>");
       return false;
     }
-  } else {
-    inputName.focus();
-    inputName.insertAdjacentHTML('afterend', "<p class='aviso'>Preencha o nome corretamente</p>");
+  }
+  if(validation.val){ //Faz a validação dinamica do campo
+    return true;
+  } else { //Caso falhar na validação dinâmica, passa a exibir a mensagem específica daquele campo
+    if(item.type === 'checkbox'){//Tratamento especial para inputs do tipo checkbox
+      if($(`#${item.id}`).nextElementSibling.nextElementSibling === null){
+        item.nextElementSibling.insertAdjacentHTML('afterend', `<p class='aviso'>${validation.warning}</p>`);
+      }
+    } else {//Tratamento dos demais inputs
+      if($(`#${item.id}`).nextElementSibling.classList.value !== 'aviso'){
+        item.insertAdjacentHTML('afterend', `<p class='aviso'>${validation.warning}</p>`);
+      }
+    }
+    item.focus();
     return false;
   }
 }
 
-//TODO:(Matheus Santos) Implementar validação do tab2 aqui 
 
 function verificaString(word, ...character){ //Função que testa uma string com todos os caracteres passados
   let flag = true
@@ -69,8 +87,14 @@ function verificaString(word, ...character){ //Função que testa uma string com
   return flag; //Se todos os caracteres forem encontrados retorna true
 }
 
-function correcaoDoDado(){ // É chamado toda vez que um campo é alterado no HTML
-  if($('.aviso') !== null){ // Se houver alguma tag com classe 'aviso' indicando que o campo está preenchido de modo incorreto
-    $('.aviso').remove(); //Após a mudança no campo remove esse aviso
+function correcaoDoDado(params){ // É chamado toda vez que um campo é alterado no HTML
+  if(params === 'termo'){ //Tratamento diferente para o campo checkbox
+    if($(`#${params}`).nextElementSibling.nextElementSibling !== null){
+      $(`#${params}`).nextElementSibling.nextElementSibling.remove(); //Após a mudança no campo remove esse aviso
+    }
+  } else {
+    if($(`#${params}`).nextElementSibling.classList.value === 'aviso'){
+      $(`#${params}`).nextElementSibling.remove(); //Após a mudança no campo remove esse aviso
+    }
   }
 }
