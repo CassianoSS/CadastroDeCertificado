@@ -69,18 +69,159 @@
     width: 100%;
     height: 506px; 
     margin-bottom: 1em;
-    }
-
-    .cards-inputs label{
-        margin-bottom: 0.2em; 
-        display:block;
     } 
 
-    .card-inputs input [type="text"], .cards-inputs [type="email"]{
-        padding: 0.2em; 
-        border: 1px solid tomato;
+    .nome, .nickname{
+        width:515px;
+        height: 16px; 
+        top: -20px; 
+        font-family: Nunito; 
+        font-style: normal; 
+        font-size: 14px; 
+        line-height: 16px; 
+        font-weight: 400;
+    } 
+
+    #n1 {
+        width: 515px; 
+        height: 40px; 
+        top: 496px; 
+        left: 236px; 
+        border-radius: 4px; 
+        border: 2px solid tomato;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);  
+    } 
+
+    #nk{
+        width: 515px;
+        height: 40px; 
+        top: 584px; 
+        left: 236px; 
+        border-radius: 4px; 
+        border: 2px solid tomato;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
-        display: block;
+    }
+ 
+    .email{
+        width: 330px; 
+        height: 16px; 
+        top: -20px;
+        font-family: Nunito; 
+        font-size: 14px; 
+        font-style: normal; 
+        font-weight: 400; 
+        line-height: 16px;
+    }
+
+    .telefone{
+        width: 162px;
+        height: 16px; 
+        top: -20px; 
+        font-family: Nunito; 
+        font-size: 14px; 
+        font-style: normal; 
+        font-weight: 400;
+        line-height: 16px;
+    } 
+
+    #tel{
+        width: 162px; 
+        height: 40px; 
+        top: 672px; 
+        left: 589px; 
+        border-radius: 4px; 
+        border: 2px solid tomato;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    } 
+
+    .data{
+        width: 503px; 
+        height: 16px; 
+        top: 745px; 
+        left: 236px; 
+        font-family: Nunito; 
+        font-weight: 400; 
+        font-size: 18px; 
+        font-style: normal;
+        line-height: 16px;
+    } 
+
+    .age{
+        width: 101px;
+        height: 16px;
+        top: -20px; 
+        font-family: Nunito; 
+        font-size: 14px; 
+        font-style: normal; 
+        font-weight: 400; 
+        line-height: 16px;
+    } 
+
+    #idade{
+        width: 101px; 
+        height: 40px; 
+        top: 794px; 
+        left: 650px; 
+        border-radius: 4px; 
+        border: 2px solid tomato;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    } 
+
+    .checkbox{
+        width: 12px; 
+        height: 9.42px; 
+        top: 5.58px; 
+        left: 3.99px; 
+    } 
+
+    #frase{
+        width: 214px; 
+        height: 18px; 
+        top: 4px; 
+        left: 32px; 
+        font-family: Nunito;
+        font-size: 16px; 
+        font-weight: 400; 
+        font-style: normal; 
+        line-height: 18px; 
+    } 
+
+    .linkedin, .github{
+        width: 503px;
+        height: 16px;
+        top: -20px; 
+        font-family: Nunito; 
+        font-weight: 400; 
+        font-style: normal; 
+        font-size: 14px; 
+        line-height: 16px;
+    } 
+
+    #linkedin{
+        width: 503px;
+        height: 40px; 
+        top: 496px; 
+        left: 236px; 
+        border-radius: 4px; 
+        border: 2px solid tomato;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    } 
+
+    #github{ 
+        width: 503px; 
+        height: 40px; 
+        top: 593px; 
+        left: 236px;
+        border-radius: 4px; 
+        border: 2px solid tomato;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); 
+    }
+      
+    .title{
+        width: 515px;
+        height: 48px;
+        top: 391px; 
+        left: 236px; 
     }
     
     #footerForm{
@@ -142,9 +283,7 @@
         margin-right: 1em;
     }
 
-    .card-inputs input{
 
-    }
 
     body{
         font-family: sans-serif; 
