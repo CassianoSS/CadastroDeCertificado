@@ -26,24 +26,24 @@
                         <legend class="dados">Dados Básicos</legend>
             
                         <label for="n1"><strong>Nome Completo</strong></label><br>
-                        <input type="text" id="n1" class="input-padrao" required><br>
+                        <input type="text" id="n1" class="input-padrao" onchange="correcaoDoDado()" required><br>
             
                         <label for="nk"><strong>Nickname</strong></label><br>
-                        <input type="text" id="nk" class="input-padrao" required><br>
+                        <input type="text" id="nk" class="input-padrao" onchange="correcaoDoDado()" required><br>
             
                         <label for="email"><strong>E-mail</strong></label><br>
-                        <input type="email" id="email" class="input-padrao" required><br>
+                        <input type="email" id="email" class="input-padrao" onchange="correcaoDoDado()" required><br>
             
                         <label for="tel"><strong>Telefone</strong></label><br>
-                        <input type="text" id="tel" class="input-padrao" required><br>
+                        <input type="text" id="tel" class="input-padrao" onchange="correcaoDoDado()" required><br>
             
                         <label for="dn"><strong>Data de Nascimento</strong></label><br>
-                        <input type="date" name="dta-base" id="dn" class="inputUser" required><br>
+                        <input type="date" name="dta-base" id="dn" class="inputUser" onchange="correcaoDoDado()" required><br>
             
                         <label for="idade"><strong>Idade</strong></label><br>
-                        <input type="text" id="idade" class="input-padrao" required><br>
+                        <input type="text" id="idade" class="input-padrao" onchange="correcaoDoDado()" required><br>
             
-                        <label class="checkbox"><input type="checkbox" required>Eu li e aceito os termos de privacidade</label>
+                        <label class="checkbox"><input type="checkbox" id="checkboxTermos" onchange="correcaoDoDado()" required>Eu li e aceito os termos de privacidade</label>
                     </fieldset>
                 </div> 
                    <div class="card-inputs">
@@ -71,6 +71,7 @@
            </div><!--form-card-->
    </div>
    <script src="js/controller/FormsController.js"></script>
+   <script src="js/services/ValidationForms.js"></script>
     <script>
         var formController = new FormsController();
     </script>

@@ -12,11 +12,11 @@ class FormsController{
   nextForm(){
     switch (this._formNumber) {
       case 1:
-        // if(validationForm1()){
+        if(validationForm1()){
           this._chooseTab1.classList.remove('choose');
           this._chooseTab2.classList.add('choose');
           this._formNumber ++;
-        // }
+        }
         break;
       case 2:
         // if(validationForm2()){
@@ -41,14 +41,14 @@ class FormsController{
           this._formNumber = 1;
           break;
         case 'chooseTab2':
-          // if(validationForm1()){
+          if(validationForm1()){
             this._chooseTab1.classList.remove('choose');
             this._chooseTab3.classList.remove('choose');
             this._btnFinish.classList.add('displayNone');
             this._btnNext.classList.remove('displayNone');
             this._chooseTab2.classList.add('choose');
             this._formNumber = 2;
-          // }
+          }
           break;
         case 'chooseTab3':
           // if(validationForm1() && validationForm2()){

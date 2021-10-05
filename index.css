@@ -119,6 +119,11 @@
     float:right;
     margin-top: 10px;
     } */
+
+    .aviso{
+        font-size: 12px;
+        color: #FFF;/*TODO: Trocar cor quando mudar o fundo*/
+    }
     
     @media only screen and (max-width: 655px){
     .form-card{
