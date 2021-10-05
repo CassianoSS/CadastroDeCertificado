@@ -107,7 +107,7 @@ h4 {
     } */
 
 .modal-certificates {
-  /* display: none; */
+  display: none;
   z-index: 1;
   max-width: 617px;
   max-height: 763px;
