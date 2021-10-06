@@ -7,6 +7,9 @@ class FormsController{
     this._chooseTab3 = $('#chooseTab3');
     this._btnNext = $('#btnNext');
     this._btnFinish = $('#btnFinish');
+    this._tab1 = $('#tab1');
+    this._tab2 = $('#tab2');
+    this._tab3 = $('#tab3');
   }
 
   nextForm(){
@@ -35,6 +38,9 @@ class FormsController{
         case 'chooseTab1':
           this._chooseTab2.classList.remove('choose');
           this._chooseTab3.classList.remove('choose');
+          this._tab1.classList.remove('displayNone');
+          this._tab2.classList.add('displayNone');
+          this._tab3.classList.add('displayNone');
           this._btnFinish.classList.add('displayNone');
           this._btnNext.classList.remove('displayNone');
           this._chooseTab1.classList.add('choose');
@@ -44,6 +50,9 @@ class FormsController{
           if(validationForm1()){
             this._chooseTab1.classList.remove('choose');
             this._chooseTab3.classList.remove('choose');
+            this._tab1.classList.add('displayNone');
+            this._tab2.classList.remove('displayNone');
+            this._tab3.classList.add('displayNone');
             this._btnFinish.classList.add('displayNone');
             this._btnNext.classList.remove('displayNone');
             this._chooseTab2.classList.add('choose');
@@ -55,6 +64,9 @@ class FormsController{
             this._chooseTab1.classList.remove('choose');
             this._chooseTab2.classList.remove('choose');
             this._chooseTab3.classList.add('choose');
+            this._tab1.classList.add('displayNone');
+            this._tab2.classList.add('displayNone');
+            this._tab3.classList.remove('displayNone');
             this._btnNext.classList.add('displayNone');
             this._btnFinish.classList.remove('displayNone');
             this._formNumber = 3;
