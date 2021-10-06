@@ -40,49 +40,41 @@
           <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
           <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
         </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-          <img id="backbutton" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
-        </div>
-      </form>
-    </div>
-    <div class="form-card">
-      <h4>Team Sign Up</h4>
-      <div class="tabs">
-        <div id="chooseTab1" class="chooseTabs choose" onclick="formController.clickChoice('chooseTab1')">
-          <p>Basic</p>
-        </div>
-        <div id="chooseTab2" class="chooseTabs" onclick="formController.clickChoice('chooseTab2')">
-          <p>Social</p>
-        </div>
-        <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')">
-          <p>Certificates</p>
-        </div>
-      </div>
-      <div class="tab1" id="tab1">
-        <div class="card-inputs">
-          <fieldset class="grupo">
-            <legend class="title">Dados Básicos</legend>
 
-            <label for="n1" class="nome"><strong>Nome Completo</strong></label><br>
-            <input type="text" id="n1" required><br>
+          <div class="card-inputs"> 
+            <fieldset class="grupo">
+              <legend class="title">Dados Básicos</legend>
+            
+              <label for="n1" class="nome"><strong>Nome Completo</strong></label><br>
+              <input type="text" id="n1" class="input-tab1" name="nome" onchange="correcaoDoDado('n1')" required><br>
 
-            <label for="nk" class="nickname"><strong>Nickname</strong></label><br>
-            <input type="text" id="nk" required><br>
+              <label for="nk" class="nickname"><strong>Nickname</strong></label><br>
+              <input type="text" id="nk"  class="input-tab1" name="nickname" onchange="correcaoDoDado('nk')" required><br>
 
-            <label for="email" class="email"><strong>E-mail</strong></label><br>
-            <input type="email" id="email" class="input-padrao" required><br>
+              <label for="email" class="email"><strong>E-mail</strong></label><br>
+              <input type="email" id="email" class="input-padrao input-tab1" name="email" onchange="correcaoDoDado('email')" required><br>
 
-            <label for="tel" class="telefone"><strong>Telefone</strong></label><br>
-            <input type="text" id="tel" required><br>
+              <label for="tel" class="telefone"><strong>Telefone</strong></label><br>
+              <input type="text" id="tel" class="input-tab1" name="telefone" onchange="correcaoDoDado('tel')" required><br>
 
-            <label for="dn" class="data"><strong>Data de Nascimento</strong></label><br>
-            <input type="date" name="data-base" id="dn" class="inputUser" required><br>
+              <label for="dn" class="data"><strong>Data de Nascimento</strong></label><br>
+              <input type="date" id="dn" class="inputUser input-tab1" name="data" onchange="correcaoDoDado('dn')" required><br>
 
-            <label for="idade" class="age"><strong>Idade</strong></label><br>
-            <input type="text" id="idade" required><br>
+              <label for="idade" class="age"><strong>Idade</strong></label><br>
+              <input type="text" id="idade" class="input-tab1" name="idade" onchange="correcaoDoDado('idade')" required><br>
+
+              <label for="frase" class="checkbox">
+                <input id="frase" type="checkbox" class="input-tab1" name="termos" onchange="correcaoDoDado('frase')" required>Eu li e aceito os termos de privacidade<br>
+              </label>
+            </fieldset>
+            </div> 
+             <div class="card-inputs">
+               <fieldset class="grupo">
+                  <legend class="title"><strong>Mídias Socias</strong></legend>
+            
+                  <label for="linkedin" class="linkedin"><strong>Linkedin</strong></label><br>
+                  <input type="text" id="linkedin" required><br>
+
 
             <label for="frase" class="checkbox">
               <input id="frase" type="checkbox" required>Eu li e aceito os termos de privacidade
@@ -138,15 +130,14 @@
             <img src="assets/icons/Leading Icon.svg" alt="Check de confirmação" />
             Finish
           </button>
-        </div>
-        <!-- <input type="submit"  id="next-button" value="Next >"> -->
-
-        <!--form-card-->
+        </div>      
       </div>
-      <script src="js/controller/FormsController.js"></script>
-      <script>
-        var formController = new FormsController();
-      </script>
-</body>
-
+    </div>
+    <script src="js/controller/FormsController.js"></script>
+    <script src="js/services/ValidationForms.js"></script>
+    <script>
+      var formController = new FormsController();
+    </script>
+  </body>
 </html>
+

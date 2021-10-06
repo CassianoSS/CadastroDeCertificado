@@ -37,31 +37,9 @@ h4 {
   font-size: 24px;  
 }
 
-.tabs{
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    height: 48px;  
-    width: 100%;
-    margin-top: 30px;
-}
-
-.chooseTabs{
-    height: 48px;
-    width: 33.33%;
-    display: flex;
-    flex-flow: column;
-    text-align: center;
-    justify-content: center;
-    font-size: 16px;
-    font-family: Nunito;
-    border-bottom: solid 2px #AAA;
-    cursor: pointer;
-}
-.choose{
-    transition: border 0.5s, color 0.5s;
-    color: #074EE8;
-    border-bottom: solid 3px #074EE8;
+.aviso{
+    font-size: 12px;
+    color: #FFF;/*TODO: Trocar cor quando mudar o fundo*/
 }
 
 .card-inputs{
@@ -247,19 +225,6 @@ margin-bottom: 1em;
 .displayNone{
     display: none;
 }
-
-/* #next-button{
-width: 82px;
-height: 40px;
-background-color:#074EE8;
-border-radius: 4px;
-color: white;
-font-family: Nunito, sans-serif;
-font-size: 16px;
-bottom: 0;
-float:right;
-margin-top: 10px;
-} */
   
 .form-card {
   max-width: 617px;
