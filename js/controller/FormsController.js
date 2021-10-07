@@ -22,13 +22,13 @@ class FormsController {
         }
         break;
       case 2:
-        // if(validationForm2()){
+        if(validationForm2()){
         this._chooseTab2.classList.remove("choose");
         this._chooseTab3.classList.add("choose");
         this._btnNext.classList.add("displayNone");
         this._btnFinish.classList.remove("displayNone");
         this._formNumber++;
-        // }
+        }
         break;
     }
   }
