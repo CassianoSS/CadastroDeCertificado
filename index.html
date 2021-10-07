@@ -126,13 +126,13 @@
             <p>Certificates</p>
           </div>
         </div>
-        <div class="card-inputs">   <!--basic-->
+        <div id="tab1" class="card-inputs">   <!--basic-->
           <fieldset class="grupo">
             <div class="formbox">
               <p class="subtitle">Nome Completo</p>
 
               <input name="nome"  type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')" required />
-           </div>
+            </div>
             <div class="formbox">
               <p class="subtitle">Nickname</p>
 
@@ -144,38 +144,36 @@
               <input name="email"  type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')" required />
             </div>
             <div class="formbox">
-            <p class="subtitle">Telefone</p>
+              <p class="subtitle">Telefone</p>
 
-            <input name="telefone"  type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')" required />
+              <input name="telefone"  type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')" required />
+            </div>
+              <p id="birthday-text" class="subtitle">Birthday*</p>
+            <div class="birthday">
+              <div class="birthday-date">
+                <p class="subtitle">Day</p>
+                <input type="number" name="" id="">
               </div>
-          <div class="formbox">
-          <p id="birthday-text" class="subtitle">Birthday*</p>
-          <div class="birthday">
-          <div class="birthday-date">
-              <p class="subtitle">Day</p>
-              <input type="number" name="" id="">
+              <div class="birthday-date">
+                <p class="subtitle">Month</p>
+                <input type="number" name="" id="">
+              </div>
+              <div class="birthday-date">
+                <p class="subtitle">Year</p>
+                <input type="number" name="" id="">
+              </div>
+              <div class="birthday-date">
+                <p class="subtitle">Age</p>
+                <input type="number" name="" id="">
+              </div>
             </div>
-            <div class="birthday-date">
-              <p class="subtitle">Month</p>
-              <input type="number" name="" id="">
-            </div>
-            <div class="birthday-date">
-              <p class="subtitle">Year</p>
-              <input type="number" name="" id="">
-            </div>
-            <div class="birthday-date">
-              <p class="subtitle">Age</p>
-              <input type="number" name="" id="">
-            </div>
-         
-           </div>
         
             <p class="subtitle checkbox" >
               <input name="termos" id="frase" class="input-tab1" type="checkbox" required onchange="correcaoDoDado('frase')"/> Eu li e aceito os
               termos de privacidade
             </p>
           </fieldset>
-       
+        </div>
         <div class="card-inputs displayNone" id="midias"> <!--socialTab-->
           <fieldset class="grupo">
             <legend class="title">Mídias Socias</legend>
@@ -186,6 +184,9 @@
             <p class="subtitle">GitHub</p>
             <input name=""  type="text" id="github" required />
           </fieldset>
+        </div>
+        <div id="tab3" class="card-inputs displayNone">
+          <p>Oi</p>
         </div>
         <div id="footerForm">
           <button
