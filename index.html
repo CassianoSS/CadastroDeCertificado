@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="subbody">
-      <div class="modal-certificates form-card">
+      <div class="modal-certificates form-card  displayNone">
         <h4>Certificates</h4>
 
         <form action="">
@@ -126,64 +126,65 @@
             <p>Certificates</p>
           </div>
         </div>
-        <div class="card-inputs">
+        <div class="card-inputs">   <!--basic-->
           <fieldset class="grupo">
-            <legend class="title">Dados Básicos</legend>
+            <div class="formbox">
+              <p class="subtitle">Nome Completo</p>
 
-            <label for="n1" class="nome"><strong>Nome Completo</strong></label
-            ><br />
-            <input type="text" id="n1" required /><br />
+              <input name="nome"  type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')" required />
+           </div>
+            <div class="formbox">
+              <p class="subtitle">Nickname</p>
 
-            <label for="nk" class="nickname"><strong>Nickname</strong></label
-            ><br />
-            <input type="text" id="nk" required /><br />
+              <input name="nickname"  type="text" id="nk" class="input input-tab1" onchange="correcaoDoDado('nk')" required />
+            </div>
+            <div class="formbox">
+              <p class="subtitle">E-mail</p>
 
-            <label for="email" class="email"><strong>E-mail</strong></label
-            ><br />
-            <input
-              type="email"
-              id="email"
-              class="input-padrao"
-              required
-            /><br />
+              <input name="email"  type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')" required />
+            </div>
+            <div class="formbox">
+            <p class="subtitle">Telefone</p>
 
-            <label for="tel" class="telefone"><strong>Telefone</strong></label
-            ><br />
-            <input type="text" id="tel" required /><br />
-
-            <label for="dn" class="data"
-              ><strong>Data de Nascimento</strong></label
-            ><br />
-            <input
-              type="date"
-              name="data-base"
-              id="dn"
-              class="inputUser"
-              required
-            /><br />
-
-            <label for="idade" class="age"><strong>Idade</strong></label
-            ><br />
-            <input type="text" id="idade" required /><br />
-
-            <label for="frase" class="checkbox">
-              <input id="frase" type="checkbox" required />Eu li e aceito os
+            <input name="telefone"  type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')" required />
+              </div>
+          <div class="formbox">
+          <p id="birthday-text" class="subtitle">Birthday*</p>
+          <div class="birthday">
+          <div class="birthday-date">
+              <p class="subtitle">Day</p>
+              <input type="number" name="" id="">
+            </div>
+            <div class="birthday-date">
+              <p class="subtitle">Month</p>
+              <input type="number" name="" id="">
+            </div>
+            <div class="birthday-date">
+              <p class="subtitle">Year</p>
+              <input type="number" name="" id="">
+            </div>
+            <div class="birthday-date">
+              <p class="subtitle">Age</p>
+              <input type="number" name="" id="">
+            </div>
+         
+           </div>
+        
+            <p class="subtitle checkbox" >
+              <input name="termos" id="frase" class="input-tab1" type="checkbox" required onchange="correcaoDoDado('frase')"/> Eu li e aceito os
               termos de privacidade
-            </label>
+            </p>
           </fieldset>
-        </div>
-        <div class="card-inputs">
+       
+        <div class="card-inputs displayNone" id="midias"> <!--socialTab-->
           <fieldset class="grupo">
-            <legend class="title"><strong>Mídias Socias</strong></legend>
+            <legend class="title">Mídias Socias</legend>
 
-            <label for="linkedin" class="linkedin"
-              ><strong>Linkedin</strong></label
-            ><br />
-            <input type="text" id="linkedin" required /><br />
+            <p class="subtitle">LinkedIn</p>
+            <input name=""  type="text" id="linkedin" required />
 
-            <label for="github" class="github"><strong>GitHub</strong></label
-            ><br />
-            <input type="text" id="github" required /><br />
+            <p class="subtitle">GitHub</p>
+            <input name=""  type="text" id="github" required />
           </fieldset>
         </div>
         <div id="footerForm">
@@ -212,6 +213,7 @@
       <!--form-card-->
     </div>
     <script src="js/controller/FormsController.js"></script>
+    <script src="js/services/ValidationForms.js"></script>
     <script>
       var formController = new FormsController();
     </script>

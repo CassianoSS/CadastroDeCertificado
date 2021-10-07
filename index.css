@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+#midias {
+  /* display: none; */
+}
+
 h4 {
   font-size: 24px;
   font-family: Inter;
@@ -63,13 +67,6 @@ h4 {
   border-bottom: solid 3px #074ee8;
 }
 
-.card-inputs {
-  background-color: tomato;
-  width: 100%;
-  height: 506px;
-  margin-bottom: 1em;
-}
-
 .nome,
 .nickname {
   width: 515px;
@@ -82,142 +79,6 @@ h4 {
   font-weight: 400;
 }
 
-#n1 {
-  width: 515px;
-  height: 40px;
-  top: 496px;
-  left: 236px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-#nk {
-  width: 515px;
-  height: 40px;
-  top: 584px;
-  left: 236px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.email {
-  width: 330px;
-  height: 16px;
-  top: -20px;
-  font-family: Nunito;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.telefone {
-  width: 162px;
-  height: 16px;
-  top: -20px;
-  font-family: Nunito;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-#tel {
-  width: 162px;
-  height: 40px;
-  top: 672px;
-  left: 589px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.data {
-  width: 503px;
-  height: 16px;
-  top: 745px;
-  left: 236px;
-  font-family: Nunito;
-  font-weight: 400;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 16px;
-}
-
-.age {
-  width: 101px;
-  height: 16px;
-  top: -20px;
-  font-family: Nunito;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-#idade {
-  width: 101px;
-  height: 40px;
-  top: 794px;
-  left: 650px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-.checkbox {
-  width: 12px;
-  height: 9.42px;
-  top: 5.58px;
-  left: 3.99px;
-}
-
-#frase {
-  width: 214px;
-  height: 18px;
-  top: 4px;
-  left: 32px;
-  font-family: Nunito;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 18px;
-}
-
-.linkedin,
-.github {
-  width: 503px;
-  height: 16px;
-  top: -20px;
-  font-family: Nunito;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-#linkedin {
-  width: 503px;
-  height: 40px;
-  top: 496px;
-  left: 236px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
-#github {
-  width: 503px;
-  height: 40px;
-  top: 593px;
-  left: 236px;
-  border-radius: 4px;
-  border: 2px solid tomato;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
-
 .title {
   width: 515px;
   height: 48px;
@@ -228,7 +89,7 @@ h4 {
 #footerForm {
   display: flex;
   flex-direction: row-reverse;
-  padding: 45px 0;
+  /* padding: 45px 0; */
 }
 .btnDefault {
   display: flex;
@@ -245,10 +106,38 @@ h4 {
 .btnDefault:active {
   background-color: #0e42b1;
 }
-.displayNone {
-  display: none;
+
+.birthday {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 
+.birthday-date {
+  display: flex;
+  width: 22%;
+  flex-flow: column;
+}
+
+.birthday-date input {
+  font-size: 16px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+#birthday-text {
+  font-size: 18px;
+}
+
+.checkbox {
+  margin-top: 20px;
+  font-size: 16px !important;
+}
 /* #next-button{
 width: 82px;
 height: 40px;
@@ -305,16 +194,10 @@ margin-top: 10px;
 }
 
 .card-inputs {
-  background-color: tomato;
   width: 100%;
   height: 506px;
 }
 
-#footerForm {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 45px 0;
-}
 .btnDefault {
   display: flex;
   align-items: center;
@@ -335,7 +218,6 @@ margin-top: 10px;
 }
 
 .modal-certificates {
-  display: none;
   z-index: 1;
   max-width: 617px;
   max-height: 763px;
@@ -347,13 +229,14 @@ margin-top: 10px;
   padding: 45px;
 }
 
-.modal-certificates p {
+.modal-certificates p,
+.subtitle {
   font-size: 14px;
   color: #767676;
 }
 
 .formbox {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 
 .input {
