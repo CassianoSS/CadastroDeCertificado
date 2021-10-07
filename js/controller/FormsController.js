@@ -8,7 +8,7 @@ class FormsController {
     this._btnNext = $("#btnNext");
     this._btnFinish = $("#btnFinish");
     this._tab1 = $("#tab1");
-    this._tab2 = $("#tab2");
+    this._tab2 = $("#midias");
     this._tab3 = $("#tab3");
   }
 

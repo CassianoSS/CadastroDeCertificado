@@ -18,6 +18,11 @@ h4 {
   margin: 0;
 }
 
+.warning{
+  position: absolute;
+  color: #DD5555;
+}
+
 .subbody {
   background-color: #eceef2;
   width: 100%;

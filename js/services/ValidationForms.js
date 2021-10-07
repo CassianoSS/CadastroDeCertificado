@@ -62,7 +62,7 @@ function validateItem(item, validation) {
       if ($(`#${item.id}`).nextElementSibling === null) {
         item.insertAdjacentHTML(
           "afterend",
-          `<p class='aviso'>Campo ${item.name} obrigatório</p>`
+          `<p class='warning'>Campo ${item.name} obrigatório</p>`
         );
       }
       return false;
@@ -77,7 +77,7 @@ function validateItem(item, validation) {
     if ($(`#${item.id}`).nextElementSibling === null) {
       item.insertAdjacentHTML(
         "afterend",
-        `<p class='aviso'>${validation.warning}</p>`
+        `<p class='warning'>${validation.warning}</p>`
       );
     }
     item.focus();
