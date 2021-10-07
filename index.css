@@ -214,6 +214,7 @@ margin-top: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
 }
 .btnDefault:active {
   background-color: #0e42b1;
@@ -270,10 +271,22 @@ margin-top: 10px;
   margin-top: 55px;
 }
 
+
+.flexflow{
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media only screen and (max-width: 655px) {
   .form-card {
     width: 95%;
     margin: auto;
     padding: 22px;
   }
+  .btnDefault{
+    margin-top: 30px;
+  }
 }
+
+
+
