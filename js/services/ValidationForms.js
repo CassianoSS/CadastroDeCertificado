@@ -25,8 +25,8 @@ function validationForm1() {
         warning: "Seu e-mail não parece válido!",
       },
       telefone: {
-        val: !isNaN(item.value.split(" ").join("")),
-        warning: "Seu telefone deve conter apenas números!",
+        val: !isNaN(item.value.split(" ").join("").split("-").join("").split("(").join("").split(")").join("")),
+        warning: "Seu telefone deve no seguinte padrão: '(00) 0 0000-0000'!",
       },
       data: {
         val: !isNaN(item.value.split("-").join("")),
@@ -49,7 +49,29 @@ function validationForm1() {
   return flag;
 }
 
-//TODO:(Matheus Santos) Implementar validação do tab2 aqui
+function validationForm2() {
+  let validationItems = $$(".input-tab2"); //Seleciona todos os inputs da tab2
+  let flag = true; // Flag de retorno da função
+
+  validationItems.forEach((item) => {
+    let validations = {
+      //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
+      linkedIn: {
+        val: verificaString(item.value, "https://www.linkedin.com/in/"),
+        warning: "Perfil do LinkedIn inválido!",
+      },
+      Github: {
+        val: verificaString(item.value, "https://github.com/"),
+        warning: "Perfil do GitHub inválido!",
+      },
+    };
+    if (!validateItem(item, validations[item.name])) {
+      //Testa cada item na função de validação
+      flag = false; //Caso falhe em algum campo, altera para false a variável de retorno da função
+    }
+  });
+  return flag;
+}
 
 function validateItem(item, validation) {
   //Função que valida os campos
