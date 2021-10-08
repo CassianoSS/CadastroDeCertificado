@@ -18,9 +18,9 @@ h4 {
   margin: 0;
 }
 
-.warning{
+.warning {
   position: absolute;
-  color: #DD5555;
+  color: #dd5555;
 }
 
 .subbody {
@@ -214,7 +214,6 @@ margin-top: 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-
 }
 .btnDefault:active {
   background-color: #0e42b1;
@@ -271,8 +270,7 @@ margin-top: 10px;
   margin-top: 55px;
 }
 
-
-.flexflow{
+.flexflow {
   display: flex;
   justify-content: flex-end;
 }
@@ -283,10 +281,7 @@ margin-top: 10px;
     margin: auto;
     padding: 22px;
   }
-  .btnDefault{
+  .btnDefault {
     margin-top: 30px;
   }
 }
-
-
-

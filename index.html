@@ -1,203 +1,350 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Cadastro de Certificados</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+    </style>
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta charset="UTF-8" />
-  <title>Cadastro de Certificados</title>
-  <link rel="stylesheet" href="index.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
-  </style>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-  </style>
-</head>
+  <body>
+    <div class="subbody">
+      <div class="modal-certificates form-card displayNone">
+        <h4>Certificates</h4>
 
-<body>
-  <div class="subbody">
-    <div class="modal-certificates form-card  displayNone">
-      <h4>Certificates</h4>
-
-      <form action="">
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-          <img id="backbutton" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
-        </div>
-      </form>
-    </div>
-    <div class="form-card">
-      <h4>Team Sign Up</h4>
-      <!-- NAVBAR TABS -->
-      <div class="tabs">
-        <div id="chooseTab1" class="chooseTabs choose" onclick="formController.clickChoice('chooseTab1')">
-          <p>Basic</p>
-        </div>
-        <div id="chooseTab2" class="chooseTabs" onclick="formController.clickChoice('chooseTab2')">
-          <p>Social</p>
-        </div>
-        <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')">
-          <p>Certificates</p>
-        </div>
+        <form action="">
+          <div class="formbox">
+            <p>Certificate</p>
+            <input
+              class="input"
+              type="url"
+              value=""
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+            />
+            <img
+              class="heart"
+              src="./assets/icons/Icon coracao.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="formbox">
+            <p>Certificate</p>
+            <input
+              class="input"
+              type="url"
+              value=""
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+            />
+            <img
+              class="heart"
+              src="./assets/icons/Icon coracao.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="formbox">
+            <p>Certificate</p>
+            <input
+              class="input"
+              type="url"
+              value=""
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+            />
+            <img
+              class="heart"
+              src="./assets/icons/Icon coracao.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="formbox">
+            <p>Certificate</p>
+            <input
+              class="input"
+              type="url"
+              value=""
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+            />
+            <img
+              class="heart"
+              src="./assets/icons/Icon coracao.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="formbox">
+            <p>Certificate</p>
+            <input
+              class="input"
+              type="url"
+              value=""
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+            />
+            <img
+              class="heart"
+              src="./assets/icons/Icon coracao.svg"
+              alt=""
+              srcset=""
+            />
+            <img
+              id="backbutton"
+              src="./assets/icons/Icon Back.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </form>
       </div>
-      <!-- TAB 1 -->
-      <div id="tab1" class="card-inputs">
-        <!--basic-->
-        <fieldset class="grupo">
-          <div class="formbox">
-            <p class="subtitle">Nome Completo</p>
-
-            <input name="nome" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
-            placeholder="Foo Bar" required />
+      <div class="form-card">
+        <h4>Team Sign Up</h4>
+        <!-- NAVBAR TABS -->
+        <div class="tabs">
+          <div
+            id="chooseTab1"
+            class="chooseTabs choose"
+            onclick="formController.clickChoice('chooseTab1')"
+          >
+            <p>Basic</p>
           </div>
-          <div class="formbox">
-            <p class="subtitle">Nickname</p>
-
-            <input name="nickname" type="text" id="nk" class="input input-tab1" onchange="correcaoDoDado('nk')"
-            placeholder="Juanito"  required />
+          <div
+            id="chooseTab2"
+            class="chooseTabs"
+            onclick="formController.clickChoice('chooseTab2')"
+          >
+            <p>Social</p>
           </div>
-          <div class="formbox">
-            <p class="subtitle">E-mail</p>
-
-            <input name="email" type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')"
-            placeholder="foo@bar.com" required />
+          <div
+            id="chooseTab3"
+            class="chooseTabs"
+            onclick="formController.clickChoice('chooseTab3')"
+          >
+            <p>Certificates</p>
           </div>
-          <div class="formbox">
-            <p class="subtitle">Telefone</p>
+        </div>
+        <!-- TAB 1 -->
+        <div id="tab1" class="card-inputs">
+          <!--basic-->
+          <fieldset class="grupo">
+            <div class="formbox">
+              <p class="subtitle">Nome Completo</p>
 
-            <input name="telefone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
-             placeholder="(00) 0 0000-0000" required />
-          </div>
-          <p id="birthday-text" class="subtitle">Birthday*</p>
-          <div class="birthday">
-            <div class="birthday-date">
-              <p class="subtitle">Day</p> 
-              <input type="number" min="01" max="31">
+              <input
+                name="nome"
+                type="text"
+                id="n1"
+                class="input input-tab1"
+                onchange="correcaoDoDado('n1')"
+                placeholder="Foo Bar"
+                required
+              />
             </div>
-          </div> 
-          <div class="birthday-date">
-            <p class="subtitle">Month</p>
-            <input type="number" min="01" max="12">
-          </div> 
-          <div class="birthday-date">
-            <p class="subtitle">Year</p>
-            <input type="number" min="2021" max="1900">
-          </div> 
-          <div class="birthday-date">
-            <p class="subtitle">Age</p>
-            <input type="number" min="01" max="120">
-          </div>
-          </div>
+            <div class="formbox">
+              <p class="subtitle">Nickname</p>
 
-          <p class="subtitle checkbox">
-            <input name="termos" id="frase" class="input-tab1" type="checkbox" required
-              onchange="correcaoDoDado('frase')" /> Eu li e aceito os
-            termos de privacidade
-          </p>
-        </fieldset>
+              <input
+                name="nickname"
+                type="text"
+                id="nk"
+                class="input input-tab1"
+                onchange="correcaoDoDado('nk')"
+                placeholder="Juanito"
+                required
+              />
+            </div>
+            <div class="formbox">
+              <p class="subtitle">E-mail</p>
+
+              <input
+                name="email"
+                type="email"
+                id="email"
+                class="input input-tab1"
+                onchange="correcaoDoDado('email')"
+                placeholder="foo@bar.com"
+                required
+              />
+            </div>
+            <div class="formbox">
+              <p class="subtitle">Telefone</p>
+
+              <input
+                name="telefone"
+                type="text"
+                id="tel"
+                class="input input-tab1"
+                onchange="correcaoDoDado('tel')"
+                placeholder="(00) 0 0000-0000"
+                required
+              />
+            </div>
+            <p id="birthday-text" class="subtitle">Birthday*</p>
+            <div class="birthday">
+              <div class="birthday-date">
+                <p class="subtitle">Day</p>
+                <input type="number" min="01" max="31" />
+              </div>
+
+              <div class="birthday-date">
+                <p class="subtitle">Month</p>
+                <input type="number" min="01" max="12" />
+              </div>
+              <div class="birthday-date">
+                <p class="subtitle">Year</p>
+                <input type="number" min="1921" max="2021" />
+              </div>
+              <div class="birthday-date">
+                <p class="subtitle">Age</p>
+                <input type="number" min="01" max="99" />
+              </div>
+            </div>
+
+            <p class="subtitle checkbox">
+              <input
+                name="termos"
+                id="frase"
+                class="input-tab1"
+                type="checkbox"
+                required
+                onchange="correcaoDoDado('frase')"
+              />
+              Eu li e aceito os termos de privacidade
+            </p>
+          </fieldset>
+        </div>
+        <div class="card-inputs displayNone" id="midias">
+          <!--socialTab-->
+          <!-- TAB 2 -->
+
+          <fieldset class="grupo">
+            <div class="formbox">
+              <p class="subtitle">LinkedIn</p>
+              <input
+                name="linkedIn"
+                type="url"
+                id="linkedin"
+                class="input input-tab2"
+                placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                required
+                onchange="correcaoDoDado('linkedin')"
+              />
+            </div>
+
+            <div class="formbox">
+              <p class="subtitle">GitHub</p>
+              <input
+                name="Github"
+                type="url"
+                id="Github"
+                class="input input-tab2"
+                placeholder="https://github.com/foobar"
+                required
+                onchange="correcaoDoDado('Github')"
+              />
+            </div>
+          </fieldset>
+        </div>
+        <!-- CERTIFICATES -->
+        <!-- TAB3 -->
+        <div id="tab3" class="card-inputs displayNone">
+          <fieldset>
+            <div class="formbox">
+              <p class="subtitle">Certificates</p>
+              <input
+                type="url"
+                id="certificate"
+                name="certificate"
+                class="input input-tab3"
+                placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+              />
+              <img
+                src="assets/icons/Icon coracao.svg"
+                alt="favorito"
+                name="favorito"
+                class="heart"
+              />
+            </div>
+
+            <div class="formbox flexflow">
+              <button id="btnmore" onclick="" class="btnDefault">
+                <img src="assets/icons/Vector.svg" alt="Sinal de mais" />
+                More
+              </button>
+            </div>
+
+            <div class="formbox">
+              <p class="subtitle">Team Name*</p>
+              <input
+                type="url"
+                id="teamName"
+                name="teamName"
+                class="input input-tab3"
+                placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                required
+              />
+            </div>
+
+            <div class="formbox">
+              <p class="subtitle">Institution*</p>
+              <input
+                type="text"
+                id="institution"
+                name="institution"
+                class="input"
+                placeholder="Universidade da Paraíba"
+                required
+              />
+            </div>
+
+            <div class="formbox">
+              <p class="subtitle">Graduation*</p>
+              <input
+                type="text"
+                id="graduation"
+                name="graduation"
+                class="input"
+                placeholder="Ciências da Computação"
+                required
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div id="footerForm">
+          <button
+            id="btnNext"
+            onclick="formController.nextForm()"
+            class="btnDefault"
+          >
+            Next
+            <img src="assets/icons/Trailing Icon.svg" alt="Flecha de seguir" />
+          </button>
+          <button
+            id="btnFinish"
+            onclick="formController.finishForm()"
+            class="btnDefault displayNone"
+          >
+            <img
+              src="assets/icons/Leading Icon.svg"
+              alt="Check de confirmação"
+            />
+            Finish
+          </button>
+        </div>
+        <!-- <input type="submit"  id="next-button" value="Next >"> -->
       </div>
-      <div class="card-inputs displayNone" id="midias">
-        <!--socialTab-->
-        <!-- TAB 2 -->
-
-
-        <fieldset class="grupo">
-          <div class="formbox">
-            <p class="subtitle">LinkedIn</p>
-            <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required
-              onchange="correcaoDoDado('linkedin')"/>
-          </div>
-
-          <div class="formbox">
-            <p class="subtitle">GitHub</p>
-            <input name="Github" type="url" id="Github" class="input input-tab2"
-              placeholder="https://github.com/foobar" required
-              onchange="correcaoDoDado('Github')"/>
-          </div>
-
-
-        </fieldset>
-      </div>
-      <!-- CERTIFICATES -->
-      <!-- TAB3 -->
-      <div id="tab3" class="card-inputs displayNone">
-        <fieldset>
-          <div class="formbox">
-            <p class="subtitle">Certificates</p>
-            <input type="url" id="certificate" name="certificate" class="input input-tab3"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/">
-            <img src="assets/icons/Icon coracao.svg" alt="favorito" name="favorito" class="heart">
-          </div>
-
-          <div class="formbox flexflow">
-            <button id="btnmore" onclick="" class="btnDefault">
-              <img src="assets/icons/Vector.svg" alt="Sinal de mais">
-              More
-            </button>
-          </div>
-
-          <div class="formbox">
-            <p class="subtitle">Team Name*</p>
-            <input type="url" id="teamName" name="teamName" class="input input-tab3"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required>
-          </div>
-
-          <div class="formbox">
-            <p class="subtitle">Institution*</p>
-            <input type="text" id="institution" name="institution" class="input" placeholder="Universidade da Paraíba"
-              required>
-          </div>
-
-          <div class="formbox">
-            <p class="subtitle">Graduation*</p>
-            <input type="text" id="graduation" name="graduation" class="input" placeholder="Ciências da Computação"
-              required>
-          </div>
-
-        </fieldset>
-      </div>
-      <div id="footerForm">
-        <button id="btnNext" onclick="formController.nextForm()" class="btnDefault">
-          Next
-          <img src="assets/icons/Trailing Icon.svg" alt="Flecha de seguir" />
-        </button>
-        <button id="btnFinish" onclick="formController.finishForm()" class="btnDefault displayNone">
-          <img src="assets/icons/Leading Icon.svg" alt="Check de confirmação" />
-          Finish
-        </button>
-      </div>
-      <!-- <input type="submit"  id="next-button" value="Next >"> -->
+      <!--form-card-->
     </div>
-    <!--form-card-->
-  </div>
-  <script src="js/controller/FormsController.js"></script>
-  <script src="js/services/ValidationForms.js"></script>
-  <script>
-    var formController = new FormsController();
-  </script>
-</body>
-
+    <script src="js/controller/FormsController.js"></script>
+    <script src="js/services/ValidationForms.js"></script>
+    <script>
+      var formController = new FormsController();
+      let atualYear = new Date().getFullYear();
+    </script>
+  </body>
 </html>
