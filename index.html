@@ -88,7 +88,7 @@
             <p class="subtitle">Telefone</p>
 
             <input name="telefone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
-             placeholder="(00) 000000-0000" required />
+             placeholder="(00) 0 0000-0000" required />
           </div>
           <p id="birthday-text" class="subtitle">Birthday*</p>
           <div class="birthday">
@@ -126,13 +126,15 @@
           <div class="formbox">
             <p class="subtitle">LinkedIn</p>
             <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required />
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required
+              onchange="correcaoDoDado('linkedin')"/>
           </div>
 
           <div class="formbox">
             <p class="subtitle">GitHub</p>
             <input name="Github" type="url" id="Github" class="input input-tab2"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required />
+              placeholder="https://github.com/foobar" required
+              onchange="correcaoDoDado('Github')"/>
           </div>
 
 

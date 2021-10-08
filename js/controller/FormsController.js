@@ -25,16 +25,16 @@ class FormsController {
         }
         break;
       case 2:
-        // if(validationForm2()){
-        this._chooseTab2.classList.remove("choose");
-        this._chooseTab3.classList.add("choose");
-        this._tab1.classList.add("displayNone");
-        this._tab2.classList.add("displayNone");
-        this._tab3.classList.remove("displayNone");
-        this._btnNext.classList.add("displayNone");
-        this._btnFinish.classList.remove("displayNone");
-        this._formNumber++;
-        // }
+        if(validationForm2()){
+          this._chooseTab2.classList.remove("choose");
+          this._chooseTab3.classList.add("choose");
+          this._tab1.classList.add("displayNone");
+          this._tab2.classList.add("displayNone");
+          this._tab3.classList.remove("displayNone");
+          this._btnNext.classList.add("displayNone");
+          this._btnFinish.classList.remove("displayNone");
+          this._formNumber++;
+        }
         break;
     }
   }
@@ -66,17 +66,17 @@ class FormsController {
         }
         break;
       case "chooseTab3":
-        // if(validationForm1() && validationForm2()){
-        this._chooseTab1.classList.remove("choose");
-        this._chooseTab2.classList.remove("choose");
-        this._chooseTab3.classList.add("choose");
-        this._tab1.classList.add("displayNone");
-        this._tab2.classList.add("displayNone");
-        this._tab3.classList.remove("displayNone");
-        this._btnNext.classList.add("displayNone");
-        this._btnFinish.classList.remove("displayNone");
-        this._formNumber = 3;
-        // }
+        if(validationForm1() && validationForm2()){
+          this._chooseTab1.classList.remove("choose");
+          this._chooseTab2.classList.remove("choose");
+          this._chooseTab3.classList.add("choose");
+          this._tab1.classList.add("displayNone");
+          this._tab2.classList.add("displayNone");
+          this._tab3.classList.remove("displayNone");
+          this._btnNext.classList.add("displayNone");
+          this._btnFinish.classList.remove("displayNone");
+          this._formNumber = 3;
+        }
         break;
     }
   }
