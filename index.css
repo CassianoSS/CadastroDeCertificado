@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-#midias {
-  /* display: none; */
-}
-
 h4 {
   font-size: 24px;
   font-family: Inter;
@@ -120,9 +116,7 @@ h4 {
 }
 
 .birthday-date {
-  display: flex;
   width: 22%;
-  flex-flow: column;
 }
 
 .birthday-date input {

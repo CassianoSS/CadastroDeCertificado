@@ -21,7 +21,7 @@ function validationForm1() {
         warning: "Seu nickname não pode conter espaços em branco!",
       },
       email: {
-        val: verificaString(item.value, "@", ".com"),
+        val: verificaString(item.value, "@", "."),
         warning: "Seu e-mail não parece válido!",
       },
       telefone: {
@@ -40,6 +40,22 @@ function validationForm1() {
         val: item.checked,
         warning: "Precisamos que você aceite os termos!",
       },
+      day: {
+        val: function(){if (!isNaN(item.value) && (item.value <= 31 && item.value > 0)) return true}(),
+        warning: "Day incorreto!",
+      },
+      month: {
+        val: function(){if (!isNaN(item.value) && (item.value <= 12 && item.value > 0)) return true}(),
+        warning: "Month incorreto!",
+      },
+      year: {
+        val: function(){if (!isNaN(item.value) && (item.value <= new Date().getFullYear() && item.value > (new Date().getFullYear() - 100))) return true}(),
+        warning: "Year incorreto!",
+      },
+      age: {
+        val: function(){if (!isNaN(item.value) && (item.value <= 100 && item.value > 0)) return true}(),
+        warning: "Age incorreto!",
+      }
     };
     if (!validateItem(item, validations[item.name])) {
       //Testa cada item na função de validação
@@ -73,13 +89,27 @@ function validationForm2() {
   return flag;
 }
 
-function validateItem(item, validation) {
-  //Função que valida os campos
-  if (item.required) {
-    //Se o item for obrigatório
-    if (item.value !== "") {
-      //Testa se está preenchido
+function validateItem(item, validation) { //Função que valida os campos
+  //Se o item estiver preenchido
+  if (item.value !== "") {
+    //Testa se está preenchido
+    if (validation.val) {
+      //Faz a validação dinamica do campo
+      return true;
     } else {
+      //Caso falhar na validação dinâmica, passa a exibir a mensagem específica daquele campo
+      //Tratamento dos demais inputs
+      if ($(`#${item.id}`).nextElementSibling === null) {
+        item.insertAdjacentHTML(
+          "afterend",
+          `<p class='warning'>${validation.warning}</p>`
+        );
+      }
+      item.focus();
+      return false;
+    }
+  } else {
+    if (item.required){
       //No caso do campo não ser preenchido o aviso é de que o campo é obrigatório
       if ($(`#${item.id}`).nextElementSibling === null) {
         item.insertAdjacentHTML(
@@ -88,22 +118,9 @@ function validateItem(item, validation) {
         );
       }
       return false;
+    } else {
+      return true;
     }
-  }
-  if (validation.val) {
-    //Faz a validação dinamica do campo
-    return true;
-  } else {
-    //Caso falhar na validação dinâmica, passa a exibir a mensagem específica daquele campo
-    //Tratamento dos demais inputs
-    if ($(`#${item.id}`).nextElementSibling === null) {
-      item.insertAdjacentHTML(
-        "afterend",
-        `<p class='warning'>${validation.warning}</p>`
-      );
-    }
-    item.focus();
-    return false;
   }
 }
 
