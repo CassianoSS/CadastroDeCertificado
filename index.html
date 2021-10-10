@@ -15,93 +15,6 @@
 
   <body>
     <div class="subbody">
-      <div class="modal-certificates form-card displayNone">
-        <h4>Certificates</h4>
-
-        <form action="">
-          <div class="formbox">
-            <p>Certificate</p>
-            <input
-              class="input"
-              type="url"
-              value=""
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-            />
-            <img
-              class="heart"
-              src="./assets/icons/Icon coracao.svg"
-              alt=""
-              srcset=""
-            />
-          </div>
-          <div class="formbox">
-            <p>Certificate</p>
-            <input
-              class="input"
-              type="url"
-              value=""
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-            />
-            <img
-              class="heart"
-              src="./assets/icons/Icon coracao.svg"
-              alt=""
-              srcset=""
-            />
-          </div>
-          <div class="formbox">
-            <p>Certificate</p>
-            <input
-              class="input"
-              type="url"
-              value=""
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-            />
-            <img
-              class="heart"
-              src="./assets/icons/Icon coracao.svg"
-              alt=""
-              srcset=""
-            />
-          </div>
-          <div class="formbox">
-            <p>Certificate</p>
-            <input
-              class="input"
-              type="url"
-              value=""
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-            />
-            <img
-              class="heart"
-              src="./assets/icons/Icon coracao.svg"
-              alt=""
-              srcset=""
-            />
-          </div>
-          <div class="formbox">
-            <p>Certificate</p>
-            <input
-              class="input"
-              type="url"
-              value=""
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
-            />
-            <img
-              class="heart"
-              src="./assets/icons/Icon coracao.svg"
-              alt=""
-              srcset=""
-            />
-            <img
-              id="backbutton"
-              src="./assets/icons/Icon Back.svg"
-              alt=""
-              srcset=""
-            />
-          </div>
-        </form>
-      </div>
       <div class="form-card">
         <h4>Team Sign Up</h4>
         <!-- NAVBAR TABS -->
@@ -188,20 +101,20 @@
             <div class="birthday">
               <div class="birthday-date">
                 <p class="subtitle">Day</p>
-                <input name="day" id="day" class="input-tab1" onchange="correcaoDoDado('day')" type="number" min="01" max="31" />
+                <input type="number" min="01" max="31" />
               </div>
 
               <div class="birthday-date">
                 <p class="subtitle">Month</p>
-                <input name="month" id="month" class="input-tab1" onchange="correcaoDoDado('month')" type="number" min="01" max="12" />
+                <input type="number" min="01" max="12" />
               </div>
               <div class="birthday-date">
                 <p class="subtitle">Year</p>
-                <input name="year" id="year" class="input-tab1" onchange="correcaoDoDado('year')" type="number" min="1921" max="2021" />
+                <input type="number" min="1921" max="2021" />
               </div>
               <div class="birthday-date">
                 <p class="subtitle">Age</p>
-                <input name="age" id="age" class="input-tab1" onchange="correcaoDoDado('age')" type="number" min="01" max="99" />
+                <input type="number" min="01" max="99" />
               </div>
             </div>
 
@@ -272,10 +185,101 @@
             </div>
 
             <div class="formbox flexflow">
-              <button id="btnmore" onclick="" class="btnDefault">
+              <button id="myBtn" onclick="" class="btnDefault">
                 <img src="assets/icons/Vector.svg" alt="Sinal de mais" />
                 More
               </button>
+            </div>
+
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <h4>Certificates</h4>
+
+                <form action="">
+                  <div class="formbox">
+                    <p>Certificate</p>
+                    <input
+                      class="input"
+                      type="url"
+                      value=""
+                      placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                    />
+                    <img
+                      class="heart"
+                      src="./assets/icons/Icon coracao.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="formbox">
+                    <p>Certificate</p>
+                    <input
+                      class="input"
+                      type="url"
+                      value=""
+                      placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                    />
+                    <img
+                      class="heart"
+                      src="./assets/icons/Icon coracao.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="formbox">
+                    <p>Certificate</p>
+                    <input
+                      class="input"
+                      type="url"
+                      value=""
+                      placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                    />
+                    <img
+                      class="heart"
+                      src="./assets/icons/Icon coracao.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="formbox">
+                    <p>Certificate</p>
+                    <input
+                      class="input"
+                      type="url"
+                      value=""
+                      placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                    />
+                    <img
+                      class="heart"
+                      src="./assets/icons/Icon coracao.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <div class="formbox">
+                    <p>Certificate</p>
+                    <input
+                      class="input"
+                      type="url"
+                      value=""
+                      placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+                    />
+                    <img
+                      class="heart"
+                      src="./assets/icons/Icon coracao.svg"
+                      alt=""
+                      srcset=""
+                    />
+                    <img
+                      id="backbutton"
+                      class="close"
+                      src="./assets/icons/Icon Back.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </form>
+              </div>
             </div>
 
             <div class="formbox">
