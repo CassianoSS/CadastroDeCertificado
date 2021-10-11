@@ -85,9 +85,9 @@ class FormsController {
 
   finishForm() {
     console.log("Implementar Finish");
-    //if(validationForm3()){
+    if(validationForm3()){
       this._popupFinsh.classList.remove("displayNone");
-    //}
+    }
   }
 }
 
