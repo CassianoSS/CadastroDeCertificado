@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <title>Cadastro de Certificados</title>
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
   </style>
@@ -16,38 +17,6 @@
 
 <body>
   <div class="subbody">
-    <div class="modal-certificates form-card  displayNone">
-      <h4>Certificates</h4>
-
-      <form action="">
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-        </div>
-        <div class="formbox">
-          <p>Certificate</p>
-          <input class="input" type="url" value="" placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
-          <img class="heart" src="./assets/icons/Icon coracao.svg" alt="" srcset="" />
-          <img id="backbutton" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
-        </div>
-      </form>
-    </div>
     <div class="form-card">
       <h4>Team Sign Up</h4>
       <!-- NAVBAR TABS -->
@@ -69,26 +38,26 @@
           <div class="formbox">
             <p class="subtitle">Full Name*</p>
 
-            <input name="nome" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
-            placeholder="Foo Bar" required />
+            <input name="name" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
+              placeholder="Foo Bar" required />
           </div>
           <div class="formbox">
             <p class="subtitle">Nickname*</p>
 
             <input name="nickname" type="text" id="nk" class="input input-tab1" onchange="correcaoDoDado('nk')"
-            placeholder="Juanito"  required />
+              placeholder="Juanito" required />
           </div>
           <div class="formbox">
             <p class="subtitle">E-mail*</p>
 
             <input name="email" type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')"
-            placeholder="foo@bar.com" required />
+              placeholder="foo@bar.com" required />
           </div>
           <div class="formbox">
             <p class="subtitle">Phone*</p>
 
-            <input name="telefone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
-             placeholder="(00) 000000-0000" required />
+            <input name="phone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
+              placeholder="(00) 0 0000-0000" required />
           </div>
           <p id="birthday-text" class="subtitle">Birthday*</p>
           <div class="birthday">
@@ -98,7 +67,7 @@
               </div>
             <div class="birthday-date"> 
               <p class="subtitle">Month*</p>
-              <input type="number" min="01" max="31" required/>
+              <input type="number" min="01" max="12" required/>
             </div> 
           <div class="birthday-date"> 
             <p class="subtitle">Year*</p>
@@ -120,12 +89,11 @@
         <!--socialTab-->
         <!-- TAB 2 -->
 
-
         <fieldset class="grupo">
           <div class="formbox">
             <p class="subtitle">LinkedIn</p>
             <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
-              placeholder="linkedin.com/in/foo-bar-3a0560104/" required />
+              placeholder="linkedin.com/in/foo-bar-3a0560104/" />
           </div>
 
           <div class="formbox">
@@ -133,8 +101,6 @@
             <input name="Github" type="url" id="Github" class="input input-tab2"
               placeholder="github.com/in/foo-bar-3a0560104/" required />
           </div>
-
-
         </fieldset>
       </div>
       <!-- CERTIFICATES -->
@@ -143,36 +109,80 @@
         <fieldset>
           <div class="formbox">
             <p class="subtitle">Certificates</p>
-            <input type="url" id="certificate" name="certificate" class="input input-tab3"
-              placeholder="linkedin.com/in/foo-bar-3a0560104/">
-            <img src="assets/icons/Icon coracao.svg" alt="favorito" name="favorito" class="heart">
+            <input type="url" id="certificate" name="certificate" class="input input-tab3 input-certificate"
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+            <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+           
           </div>
 
           <div class="formbox flexflow">
-            <button id="btnmore" onclick="" class="btnDefault">
-              <img src="assets/icons/Vector.svg" alt="Sinal de mais">
+            <button id="myBtn" onclick="" class="btnDefault">
+              <img src="assets/icons/Vector.svg" alt="Sinal de mais" />
               More
             </button>
           </div>
 
+<!-- INICIO MODAL -->
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <h4>Certificates</h4>
+
+              <form action="">
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input class="input input-certificate" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input class="input input-certificate" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input class="input input-certificate" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input class="input input-certificate" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input class="input input-certificate" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                  <img id="backbutton" class="close" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+<!-- FIM MODAL -->
+
           <div class="formbox">
             <p class="subtitle">Team Name*</p>
-            <input type="url" id="teamName" name="teamName" class="input input-tab3"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required>
+            <input type="url" id="teamName" name="teamName" class="input input-tab3 input-certificate"
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required />
           </div>
 
           <div class="formbox">
             <p class="subtitle">Institution*</p>
             <input type="text" id="institution" name="institution" class="input" placeholder="Universidade da Paraíba"
-              required>
+              required />
           </div>
 
           <div class="formbox">
             <p class="subtitle">Graduation*</p>
             <input type="text" id="graduation" name="graduation" class="input" placeholder="Ciências da Computação"
-              required>
+              required />
           </div>
-
         </fieldset>
       </div>
       <div id="footerForm">
@@ -185,15 +195,31 @@
           Finish
         </button>
       </div>
-      <!-- <input type="submit"  id="next-button" value="Next >"> -->
+      <!--form-card-->
+      <div class="fundoBlack displayNone">
+        <div class="popupFinish">
+          <h3>Cadastro finalizado com sucesso!</h3>
+          <img src="assets/icons/check-circle.svg" alt="Check">
+        </div>
+      </div>
     </div>
-    <!--form-card-->
-  </div>
-  <script src="js/controller/FormsController.js"></script>
-  <script src="js/services/ValidationForms.js"></script>
-  <script>
-    var formController = new FormsController();
-  </script>
-</body>
+    <script src="js/services/ValidationForms.js"></script>
+    <script src="js/controller/FormsController.js"></script>
+    <script>
+      var formController = new FormsController();
+      let atualYear = new Date().getFullYear();
+      window.onload = createListener();
+      function clickFav(x) {      
+        if (x.classList[x.classList.length-1] == "fa-heart") {
+          x.classList.remove('fa-heart');
+          x.classList.add('fa-heart-o');        
+        }
+        else {
+          x.classList.add('fa-heart');   
+          x.classList.remove('fa-heart-o');   
 
+        }
+      }
+    </script>
+  </body>
 </html>
