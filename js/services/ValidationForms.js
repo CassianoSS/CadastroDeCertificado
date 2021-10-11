@@ -14,31 +14,31 @@ function validationForm1() {
       //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
       nome: {
         val: verificaString(item.value, " "),
-        warning: "Seu nome precisa estar completo!",
+        warning: "Your name need to be complete!",
       },
       nickname: {
         val: item.value.indexOf(" ") === -1,
-        warning: "Seu nickname não pode conter espaços em branco!",
+        warning: "Your nickname cannot be blank!",
       },
       email: {
         val: verificaString(item.value, "@", ".com"),
-        warning: "Seu e-mail não parece válido!",
+        warning: "Your e-mail need to be valid !",
       },
       telefone: {
         val: !isNaN(item.value.split(" ").join("")),
-        warning: "Seu telefone deve conter apenas números!",
+        warning: "Your phone must only numbers!",
       },
       data: {
         val: !isNaN(item.value.split("-").join("")),
-        warning: "Sua data de nascimento não parece válida!",
+        warning: "Your birthday need to be valid!",
       },
       idade: {
         val: !isNaN(item.value),
-        warning: "Digite a idade corretamente, apenas números!",
+        warning: "Enter your age correctly, only number!",
       },
       termos: {
         val: item.checked,
-        warning: "Precisamos que você aceite os termos!",
+        warning: "We need that you to accept the terms!",
       },
     };
     if (!validateItem(item, validations[item.name])) {
