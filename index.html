@@ -36,54 +36,52 @@
         <!--basic-->
         <fieldset class="grupo">
           <div class="formbox">
-            <p class="subtitle">Nome Completo</p>
+            <p class="subtitle">Full Name*</p>
 
-            <input name="nome" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
+            <input name="name" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
               placeholder="Foo Bar" required />
           </div>
           <div class="formbox">
-            <p class="subtitle">Nickname</p>
+            <p class="subtitle">Nickname*</p>
 
             <input name="nickname" type="text" id="nk" class="input input-tab1" onchange="correcaoDoDado('nk')"
               placeholder="Juanito" required />
           </div>
           <div class="formbox">
-            <p class="subtitle">E-mail</p>
+            <p class="subtitle">E-mail*</p>
 
             <input name="email" type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')"
               placeholder="foo@bar.com" required />
           </div>
           <div class="formbox">
-            <p class="subtitle">Telefone</p>
+            <p class="subtitle">Phone*</p>
 
-            <input name="telefone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
+            <input name="phone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
               placeholder="(00) 0 0000-0000" required />
           </div>
           <p id="birthday-text" class="subtitle">Birthday*</p>
           <div class="birthday">
-            <div class="birthday-date">
-              <p class="subtitle">Day</p>
-              <input type="number" min="01" max="31" />
-            </div>
-
-            <div class="birthday-date">
-              <p class="subtitle">Month</p>
-              <input type="number" min="01" max="12" />
-            </div>
-            <div class="birthday-date">
-              <p class="subtitle">Year</p>
-              <input type="number" min="1921" max="2021" />
-            </div>
-            <div class="birthday-date">
-              <p class="subtitle">Age</p>
-              <input type="number" min="01" max="99" />
-            </div>
+              <div class="birthday-date"> 
+                <p class="subtitle">Day*</p>
+                <input type="number" min="01" max="31" required/>
+              </div>
+            <div class="birthday-date"> 
+              <p class="subtitle">Month*</p>
+              <input type="number" min="01" max="12" required/>
+            </div> 
+          <div class="birthday-date"> 
+            <p class="subtitle">Year*</p>
+             <input type="number" min="1940" max="2021" required/>
+          </div> 
+          <div class="birthday-date"> 
+            <p class="subtitle">Age*</p>
+             <input type="number" min="01" max="81" required/>
+          </div>
           </div>
 
           <p class="subtitle checkbox">
             <input name="termos" id="frase" class="input-tab1" type="checkbox" required
-              onchange="correcaoDoDado('frase')" />
-            Eu li e aceito os termos de privacidade
+              onchange="correcaoDoDado('frase')" /> I accept the terms and privacy.
           </p>
         </fieldset>
       </div>
@@ -95,14 +93,13 @@
           <div class="formbox">
             <p class="subtitle">LinkedIn</p>
             <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required
-              onchange="correcaoDoDado('linkedin')" />
+              placeholder="linkedin.com/in/foo-bar-3a0560104/" />
           </div>
 
           <div class="formbox">
-            <p class="subtitle">GitHub</p>
-            <input name="Github" type="url" id="Github" class="input input-tab2" placeholder="https://github.com/foobar"
-              required onchange="correcaoDoDado('Github')" />
+            <p class="subtitle">GitHub*</p>
+            <input name="Github" type="url" id="Github" class="input input-tab2"
+              placeholder="github.com/in/foo-bar-3a0560104/" required />
           </div>
         </fieldset>
       </div>
