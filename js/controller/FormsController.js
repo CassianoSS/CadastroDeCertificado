@@ -27,7 +27,7 @@ class FormsController {
         }
         break;
       case 2:
-        if(validationForm2()){
+        if (validationForm2()) {
           this._chooseTab2.classList.remove("choose");
           this._chooseTab3.classList.add("choose");
           this._tab1.classList.add("displayNone");
@@ -68,7 +68,7 @@ class FormsController {
         }
         break;
       case "chooseTab3":
-        if(validationForm1() && validationForm2()){
+        if (validationForm1() && validationForm2()) {
           this._chooseTab1.classList.remove("choose");
           this._chooseTab2.classList.remove("choose");
           this._chooseTab3.classList.add("choose");
@@ -111,3 +111,24 @@ function clearForm(e){
 function createListener(){
   document.querySelector('.fundoBlack').addEventListener('click', clearForm);
 };
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
