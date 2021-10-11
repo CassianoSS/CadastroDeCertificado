@@ -12,7 +12,7 @@ function validationForm1() {
   validationItems.forEach((item) => {
     let validations = {
       //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
-      nome: {
+      name: {
         val: verificaString(item.value, " "),
         warning: "Your name need to be complete!",
       },
@@ -24,7 +24,7 @@ function validationForm1() {
         val: verificaString(item.value, "@", "."),
         warning: "Your e-mail need to be valid !",
       },
-      telefone: {
+      phone: {
         val: !isNaN(item.value.split(" ").join("").split("-").join("").split("(").join("").split(")").join("")),
         warning: "Your phone must only numbers!",
       },
@@ -42,19 +42,19 @@ function validationForm1() {
       },
       day: {
         val: function(){if (!isNaN(item.value) && (item.value <= 31 && item.value > 0)) return true}(),
-        warning: "Day incorreto!",
+        warning: "Day invalid!",
       },
       month: {
         val: function(){if (!isNaN(item.value) && (item.value <= 12 && item.value > 0)) return true}(),
-        warning: "Month incorreto!",
+        warning: "Month invalid!",
       },
       year: {
         val: function(){if (!isNaN(item.value) && (item.value <= new Date().getFullYear() && item.value > (new Date().getFullYear() - 100))) return true}(),
-        warning: "Year incorreto!",
+        warning: "Year invalid!",
       },
       age: {
         val: function(){if (!isNaN(item.value) && (item.value <= 100 && item.value > 0)) return true}(),
-        warning: "Age incorreto!",
+        warning: "Age invalid!",
       }
     };
     if (!validateItem(item, validations[item.name])) {
@@ -89,6 +89,38 @@ function validationForm2() {
   return flag;
 }
 
+function validationForm3() {
+  let validationItems = $$(".input-tab3"); //Seleciona todos os inputs da tab2
+  let flag = true; // Flag de retorno da função
+
+  validationItems.forEach((item) => {
+    let validations = {
+      //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
+      certificate: {
+        val: verificaString(item.value, "linkedin.com/in/"),
+        warning: "Certificate invalid!",
+      },
+      'team name': {
+        val: verificaString(item.value, "linkedin.com/in/"),
+        warning: "Team invalid!",
+      },
+      institution: {
+        val: verificaString(item.value, " "),
+        warning: "Institution invalid!",
+      },
+      graduation: {
+        val: verificaString(item.value, " "),
+        warning: "Graduation invalid!",
+      },
+    };
+    if (!validateItem(item, validations[item.name])) {
+      //Testa cada item na função de validação
+      flag = false; //Caso falhe em algum campo, altera para false a variável de retorno da função
+    }
+  });
+  return flag;
+}
+
 function validateItem(item, validation) { //Função que valida os campos
   //Se o item estiver preenchido
   if (item.value !== "") {
@@ -99,7 +131,7 @@ function validateItem(item, validation) { //Função que valida os campos
     } else {
       //Caso falhar na validação dinâmica, passa a exibir a mensagem específica daquele campo
       //Tratamento dos demais inputs
-      if ($(`#${item.id}`).nextElementSibling === null) {
+      if ($(`#${item.id}`).nextElementSibling === null || ($(`#${item.id}`).nextElementSibling !== null && $(`#${item.id}`).nextElementSibling.classList[0] !== 'warning')) {
         item.insertAdjacentHTML(
           "afterend",
           `<p class='warning'>${validation.warning}</p>`
@@ -139,6 +171,8 @@ function verificaString(word, ...character) {
 function correcaoDoDado(params) {
   // É chamado toda vez que um campo é alterado no HTML
   if ($(`#${params}`).nextElementSibling !== null) {
-    $(`#${params}`).nextElementSibling.remove(); //Após a mudança no campo remove esse aviso
+    if($(`#${params}`).nextElementSibling.classList[0] === 'warning'){
+      $(`#${params}`).nextElementSibling.remove(); //Após a mudança no campo remove esse aviso
+    }
   }
 }

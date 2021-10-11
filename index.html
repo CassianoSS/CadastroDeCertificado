@@ -63,19 +63,19 @@
           <div class="birthday">
               <div class="birthday-date"> 
                 <p class="subtitle">Day*</p>
-                <input type="number" min="01" max="31" required/>
+                <input type="number" min="01" max="31" name="day" id="day" class="input input-tab1" onchange="correcaoDoDado('day')" required/>
               </div>
             <div class="birthday-date"> 
               <p class="subtitle">Month*</p>
-              <input type="number" min="01" max="12" required/>
+              <input type="number" min="01" max="12" name="month" id="month" class="input input-tab1" onchange="correcaoDoDado('month')" required/>
             </div> 
           <div class="birthday-date"> 
             <p class="subtitle">Year*</p>
-             <input type="number" min="1940" max="2021" required/>
+             <input type="number" min="1940" max="2021" name="year" id="year" class="input input-tab1" onchange="correcaoDoDado('year')" required/>
           </div> 
           <div class="birthday-date"> 
             <p class="subtitle">Age*</p>
-             <input type="number" min="01" max="81" required/>
+             <input type="number" min="01" max="81" name="age" id="age" class="input input-tab1" onchange="correcaoDoDado('age')" required/>
           </div>
           </div>
 
@@ -93,13 +93,13 @@
           <div class="formbox">
             <p class="subtitle">LinkedIn</p>
             <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
-              placeholder="linkedin.com/in/foo-bar-3a0560104/" />
+              placeholder="linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('linkedin')" />
           </div>
 
           <div class="formbox">
             <p class="subtitle">GitHub*</p>
             <input name="Github" type="url" id="Github" class="input input-tab2"
-              placeholder="github.com/in/foo-bar-3a0560104/" required />
+              placeholder="github.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('Github')" required />
           </div>
         </fieldset>
       </div>
@@ -110,7 +110,7 @@
           <div class="formbox">
             <p class="subtitle">Certificates</p>
             <input type="url" id="certificate" name="certificate" class="input input-tab3 input-certificate"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('certificate')" />
             <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
            
           </div>
@@ -131,32 +131,32 @@
               <form action="">
                 <div class="formbox">
                   <p>Certificate</p>
-                  <input class="input input-certificate" type="url" value=""
-                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <input id="c1" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c1')" />
                   <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
                 </div>
                 <div class="formbox">
                   <p>Certificate</p>
-                  <input class="input input-certificate" type="url" value=""
-                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <input id="c2" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c2')" />
                   <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
                 </div>
                 <div class="formbox">
                   <p>Certificate</p>
-                  <input class="input input-certificate" type="url" value=""
-                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <input id="c3" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c3')" />
                   <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
                 </div>
                 <div class="formbox">
                   <p>Certificate</p>
-                  <input class="input input-certificate" type="url" value=""
-                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <input id="c4" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c4')" />
                   <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
                 </div>
                 <div class="formbox">
                   <p>Certificate</p>
-                  <input class="input input-certificate" type="url" value=""
-                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" />
+                  <input id="c5" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c5')" />
                   <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
                   <img id="backbutton" class="close" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
                 </div>
@@ -168,20 +168,20 @@
 
           <div class="formbox">
             <p class="subtitle">Team Name*</p>
-            <input type="url" id="teamName" name="teamName" class="input input-tab3 input-certificate"
-              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" required />
+            <input type="url" id="teamName" name="team name" class="input input-tab3"
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('teamName')" required />
           </div>
 
           <div class="formbox">
             <p class="subtitle">Institution*</p>
-            <input type="text" id="institution" name="institution" class="input" placeholder="Universidade da Paraíba"
-              required />
+            <input type="text" id="institution" name="institution" class="input input-tab3" placeholder="Universidade da Paraíba"
+            onchange="correcaoDoDado('institution')" required />
           </div>
 
           <div class="formbox">
             <p class="subtitle">Graduation*</p>
-            <input type="text" id="graduation" name="graduation" class="input" placeholder="Ciências da Computação"
-              required />
+            <input type="text" id="graduation" name="graduation" class="input input-tab3" placeholder="Ciências da Computação"
+            onchange="correcaoDoDado('graduation')" required />
           </div>
         </fieldset>
       </div>
@@ -209,15 +209,14 @@
       var formController = new FormsController();
       let atualYear = new Date().getFullYear();
       window.onload = createListener();
-      function clickFav(x) {      
+      function clickFav(x) {
         if (x.classList[x.classList.length-1] == "fa-heart") {
           x.classList.remove('fa-heart');
-          x.classList.add('fa-heart-o');        
+          x.classList.add('fa-heart-o');
         }
         else {
-          x.classList.add('fa-heart');   
-          x.classList.remove('fa-heart-o');   
-
+          x.classList.add('fa-heart');
+          x.classList.remove('fa-heart-o');
         }
       }
     </script>
