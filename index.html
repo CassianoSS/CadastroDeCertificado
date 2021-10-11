@@ -185,7 +185,7 @@
             </div>
 
             <div class="formbox flexflow">
-              <button id="myBtn" onclick="" class="btnDefault">
+              <button id="myBtn" class="btnDefault">
                 <img src="assets/icons/Vector.svg" alt="Sinal de mais" />
                 More
               </button>
@@ -343,12 +343,19 @@
         <!-- <input type="submit"  id="next-button" value="Next >"> -->
       </div>
       <!--form-card-->
+      <div class="fundoBlack displayNone">
+        <div class="popupFinish">
+          <h3>Cadastro finalizado com sucesso!</h3>
+          <img src="assets/icons/check-circle.svg" alt="Check">
+        </div>
+      </div>
     </div>
-    <script src="js/controller/FormsController.js"></script>
     <script src="js/services/ValidationForms.js"></script>
+    <script src="js/controller/FormsController.js"></script>
     <script>
       var formController = new FormsController();
       let atualYear = new Date().getFullYear();
+      window.onload = createListener();
     </script>
   </body>
 </html>
