@@ -1,6 +1,7 @@
 class FormsController {
   constructor() {
     let $ = document.querySelector.bind(document);
+    var $$ = document.querySelectorAll.bind(document);
     this._formNumber = 1;
     this._chooseTab1 = $("#chooseTab1");
     this._chooseTab2 = $("#chooseTab2");
@@ -10,6 +11,7 @@ class FormsController {
     this._tab1 = $("#tab1");
     this._tab2 = $("#midias");
     this._tab3 = $("#tab3");
+    this._popupFinsh = $('.fundoBlack');
   }
 
   nextForm() {
@@ -83,8 +85,32 @@ class FormsController {
 
   finishForm() {
     console.log("Implementar Finish");
+    //if(validationForm3()){
+      this._popupFinsh.classList.remove("displayNone");
+    //}
   }
 }
+
+function clearForm(e){
+  if(e.target.classList['0'] === 'fundoBlack'){
+    for (let i = 1; i <= 3; i++) {
+      let validationItems = $$(`.input-tab${i}`);
+      validationItems.forEach(item => {
+        if(item.type === 'checkbox'){
+          item.checked = false;
+        } else {
+          item.value = '';
+        }
+      });
+    }
+    new FormsController().clickChoice('chooseTab1');
+    new FormsController()._popupFinsh.classList.add("displayNone");
+  }
+}
+
+function createListener(){
+  document.querySelector('.fundoBlack').addEventListener('click', clearForm);
+};
 
 var modal = document.getElementById("myModal");
 
@@ -105,3 +131,4 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+

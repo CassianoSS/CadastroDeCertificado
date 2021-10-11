@@ -199,27 +199,31 @@
           Finish
         </button>
       </div>
-      <!-- <input type="submit"  id="next-button" value="Next >"> -->
+      <!--form-card-->
+      <div class="fundoBlack displayNone">
+        <div class="popupFinish">
+          <h3>Cadastro finalizado com sucesso!</h3>
+          <img src="assets/icons/check-circle.svg" alt="Check">
+        </div>
+      </div>
     </div>
-    <!--form-card-->
-  </div>
-  <script src="js/controller/FormsController.js"></script>
-  <script src="js/services/ValidationForms.js"></script>
-  <script>
-    var formController = new FormsController();
-    let atualYear = new Date().getFullYear();
-    function clickFav(x) {      
-      if (x.classList[x.classList.length-1] == "fa-heart") {
-        x.classList.remove('fa-heart');
-        x.classList.add('fa-heart-o');        
-      }
-      else {
-        x.classList.add('fa-heart');   
-        x.classList.remove('fa-heart-o');   
+    <script src="js/services/ValidationForms.js"></script>
+    <script src="js/controller/FormsController.js"></script>
+    <script>
+      var formController = new FormsController();
+      let atualYear = new Date().getFullYear();
+      window.onload = createListener();
+      function clickFav(x) {      
+        if (x.classList[x.classList.length-1] == "fa-heart") {
+          x.classList.remove('fa-heart');
+          x.classList.add('fa-heart-o');        
+        }
+        else {
+          x.classList.add('fa-heart');   
+          x.classList.remove('fa-heart-o');   
 
+        }
       }
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
