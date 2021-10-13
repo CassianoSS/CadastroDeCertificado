@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Cadastro de Certificados</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+  </style>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+  </style>
+</head>
+
+<body>
+  <div class="subbody">
+    <div class="form-card">
+      <h4>Team Sign Up</h4>
+      <!-- NAVBAR TABS -->
+      <div class="tabs">
+        <div id="chooseTab1" class="chooseTabs choose" onclick="formController.clickChoice('chooseTab1')">
+          <p>Basic</p>
+        </div>
+        <div id="chooseTab2" class="chooseTabs" onclick="formController.clickChoice('chooseTab2')">
+          <p>Social</p>
+        </div>
+        <div id="chooseTab3" class="chooseTabs" onclick="formController.clickChoice('chooseTab3')">
+          <p>Certificates</p>
+        </div>
+      </div>
+      <!-- TAB 1 -->
+      <div id="tab1" class="card-inputs">
+        <!--basic-->
+        <fieldset class="grupo">
+          <div class="formbox">
+            <p class="subtitle">Full Name*</p>
+
+            <input name="name" type="text" id="n1" class="input input-tab1" onchange="correcaoDoDado('n1')"
+              placeholder="Foo Bar" required />
+          </div>
+          <div class="formbox">
+            <p class="subtitle">Nickname*</p>
+
+            <input name="nickname" type="text" id="nk" class="input input-tab1" onchange="correcaoDoDado('nk')"
+              placeholder="Juanito" required />
+          </div>
+
+
+
+
+
+          <div class="contato">
+                <div class="formbox formbox-email">
+                  <p class="subtitle">E-mail*</p>
+
+                  <input name="email" type="email" id="email" class="input input-tab1" onchange="correcaoDoDado('email')"
+                    placeholder="foo@bar.com" required />
+                </div>
+                <div class="formbox formbox-phone">
+                  <p class="subtitle">Phone*</p>
+
+                  <input name="phone" type="text" id="tel" class="input input-tab1" onchange="correcaoDoDado('tel')"
+                    placeholder="(00) 0 0000-0000" required />
+                </div>
+          </div>
+
+
+
+        
+          <p id="birthday-text" class="subtitle">Birthday*</p>
+          <div class="birthday">
+              <div class="birthday-date"> 
+                <p class="subtitle">Day*</p>
+                <input type="number" min="01" max="31" name="day" id="day" class="input input-tab1" onchange="correcaoDoDado('day')" required/>
+              </div>
+            <div class="birthday-date"> 
+              <p class="subtitle">Month*</p>
+              <input type="number" min="01" max="12" name="month" id="month" class="input input-tab1" onchange="correcaoDoDado('month')" required/>
+            </div> 
+          <div class="birthday-date"> 
+            <p class="subtitle">Year*</p>
+             <input type="number" min="1940" max="2021" name="year" id="year" class="input input-tab1" onchange="correcaoDoDado('year')" required/>
+          </div> 
+          <div class="birthday-date"> 
+            <p class="subtitle">Age*</p>
+             <input type="number" min="01" max="81" name="age" id="age" class="input input-tab1" onchange="correcaoDoDado('age')" required/>
+          </div>
+          </div>
+
+          <p class="subtitle checkbox">
+            <input name="termos" id="frase" class="input-tab1" type="checkbox" required
+              onchange="correcaoDoDado('frase')" /> I accept the terms and privacy.
+          </p>
+        </fieldset>
+      </div>
+      <div class="card-inputs displayNone" id="midias">
+        <!--socialTab-->
+        <!-- TAB 2 -->
+
+        <fieldset class="grupo">
+          <div class="formbox">
+            <p class="subtitle">LinkedIn</p>
+            <input name="linkedIn" type="url" id="linkedin" class="input input-tab2"
+              placeholder="linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('linkedin')" />
+          </div>
+
+          <div class="formbox">
+            <p class="subtitle">GitHub*</p>
+            <input name="Github" type="url" id="Github" class="input input-tab2"
+              placeholder="github.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('Github')" required />
+          </div>
+        </fieldset>
+      </div>
+      <!-- CERTIFICATES -->
+      <!-- TAB3 -->
+      <div id="tab3" class="card-inputs displayNone">
+        <fieldset>
+          <div class="formbox">
+            <p class="subtitle">Certificates</p>
+            <input type="url" id="certificate" name="certificate" class="input input-tab3 input-certificate"
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('certificate')" />
+            <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+           
+          </div>
+
+          <div class="formbox flexflow">
+            <button id="myBtn" onclick="" class="btnDefault">
+              <img src="assets/icons/Vector.svg" alt="Sinal de mais" />
+              More
+            </button>
+          </div>
+
+<!-- INICIO MODAL -->
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <h4>Certificates</h4>
+
+              <form action="">
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input id="c1" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c1')" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input id="c2" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c2')" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input id="c3" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c3')" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input id="c4" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c4')" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                </div>
+                <div class="formbox">
+                  <p>Certificate</p>
+                  <input id="c5" name="certificate" class="input input-certificate input-tab3" type="url" value=""
+                    placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('c5')" />
+                  <i onclick="clickFav(this)" class="heart fa fa-heart-o" id="fav"></i>
+                  <img id="backbutton" class="close" src="./assets/icons/Icon Back.svg" alt="" srcset="" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+<!-- FIM MODAL -->
+
+          <div class="formbox">
+            <p class="subtitle">Team Name*</p>
+            <input type="url" id="teamName" name="team name" class="input input-tab3"
+              placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/" onchange="correcaoDoDado('teamName')" required />
+          </div>
+
+          <div class="formbox">
+            <p class="subtitle">Institution*</p>
+            <input type="text" id="institution" name="institution" class="input input-tab3" placeholder="Universidade da Paraíba"
+            onchange="correcaoDoDado('institution')" required />
+          </div>
+
+          <div class="formbox">
+            <p class="subtitle">Graduation*</p>
+            <input type="text" id="graduation" name="graduation" class="input input-tab3" placeholder="Ciências da Computação"
+            onchange="correcaoDoDado('graduation')" required />
+          </div>
+        </fieldset>
+      </div>
+      <div id="footerForm">
+        <button id="btnNext" onclick="formController.nextForm()" class="btnDefault">
+          Next
+          <img src="assets/icons/Trailing Icon.svg" alt="Flecha de seguir" />
+        </button>
+        <button id="btnFinish" onclick="formController.finishForm()" class="btnDefault displayNone">
+          <img src="assets/icons/Leading Icon.svg" alt="Check de confirmação" />
+          Finish
+        </button>
+      </div>
+      <!--form-card-->
+      <div class="fundoBlack displayNone">
+        <div class="popupFinish">
+          <h3>Certificate(s) Successfully Deployed!</h3>
+          <img src="assets/icons/check-circle.svg" alt="Check">
+        </div>
+      </div>
+    </div>
+    <script src="js/services/ValidationForms.js"></script>
+    <script src="js/controller/FormsController.js"></script>
+    <script>
+      var formController = new FormsController();
+      let atualYear = new Date().getFullYear();
+      window.onload = createListener();
+      function clickFav(x) {
+        if (x.classList[x.classList.length-1] == "fa-heart") {
+          x.classList.remove('fa-heart');
+          x.classList.add('fa-heart-o');
+        }
+        else {
+          x.classList.add('fa-heart');
+          x.classList.remove('fa-heart-o');
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,357 @@
+* {
+  font-family: Nunito, sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  margin: 0;
+}
+
+.warning {
+  position: absolute;
+  color: #dd5555;
+}
+
+.subbody {
+  background-color: #eceef2;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+}
+
+.form-card {
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.form-card h4 {
+  font-size: 24px;
+}
+
+.tabs {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.chooseTabs {
+  height: 48px;
+  width: 33.33%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Nunito;
+  border-bottom: solid 2px #aaa;
+  cursor: pointer;
+}
+.choose {
+  transition: border 0.5s, color 0.5s;
+  color: #074ee8;
+  border-bottom: solid 3px #074ee8;
+}
+
+.nome,
+.nickname {
+  width: 515px;
+  height: 16px;
+  top: -20px;
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.title {
+  width: 515px;
+  height: 48px;
+  top: 391px;
+  left: 236px;
+}
+
+#footerForm {
+  display: flex;
+  flex-direction: row-reverse;
+  /* padding: 45px 0; */
+}
+.btnDefault {
+  display: flex;
+  align-items: center;
+  background-color: #074ee8;
+  font-size: 16px;
+  font-family: Nunito;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnDefault:active {
+  background-color: #0e42b1;
+}
+
+.birthday {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.birthday-date {
+  width: 22%;
+}
+
+.birthday-date input {
+  font-size: 16px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+#birthday-text {
+  font-size: 18px;
+}
+
+.contato .formbox {
+  margin-top: 0;
+}
+.contato {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formbox-email {
+  width: 65%;
+}
+
+.formbox-phone {
+  width: 30%;
+}
+.checkbox {
+  margin-top: 20px;
+  font-size: 16px !important;
+}
+
+.form-card {
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.form-card h4 {
+  font-size: 18px;
+}
+
+.tabs {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.chooseTabs {
+  height: 48px;
+  width: 33.33%;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: Nunito;
+  border-bottom: solid 2px #aaa;
+  cursor: pointer;
+}
+.choose {
+  transition: border 0.5s, color 0.5s;
+  color: #074ee8;
+  border-bottom: solid 3px #074ee8;
+}
+
+.card-inputs {
+  width: 100%;
+  height: 506px;
+}
+
+.btnDefault {
+  display: flex;
+  align-items: center;
+  background-color: #074ee8;
+  font-size: 16px;
+  font-family: Nunito;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnDefault:active {
+  background-color: #0e42b1;
+}
+.displayNone {
+  display: none;
+}
+
+.modal-certificates {
+  z-index: 1;
+  max-width: 617px;
+  max-height: 763px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.modal-certificates p,
+.subtitle {
+  font-size: 14px;
+  color: #767676;
+}
+
+.formbox {
+  margin: 30px 0;
+}
+
+.input {
+  font-size: 16px;
+  color: #767676;
+  border: 2px solid #aaaaaa;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.input-certificate {
+  padding-right: 32px;
+}
+
+.heart {
+  float: right;
+  margin: -28px 10px 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.modal-certificates h4 {
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+#backbutton {
+  float: right;
+  margin-top: 55px;
+}
+
+.flexflow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+h3 {
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.fundoBlack {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.popupFinish {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #074ee8;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 45px;
+}
+
+.modal-content {
+  max-width: 617px;
+  height: 668px;
+  width: 100%;
+
+  background-color: white;
+  margin: auto;
+  border-radius: 20px;
+  padding: 45px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 655px) {
+  .form-card {
+    width: 100%;
+    margin: auto;
+    padding: 22px;
+    height: auto;
+  }
+  .btnDefault {
+    margin-top: 30px;
+  }
+
+  .card-inputs {
+    height: auto;
+  }
+  .subbody {
+    background-color: white;
+    padding-top: 0px;
+  }
+}
