@@ -97,7 +97,7 @@ function validationForm3() {
     let validations = {
       //Variável que contém a validação específica de cada campo e sua msg de aviso, sendo a chave o id do campo
       certificate: {
-        val: verificaString(item.value, "linkedin.com/in/"),
+        val: verificaString(item.value, ".com"),
         warning: "Certificate invalid!",
       },
       'team name': {
