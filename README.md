@@ -1,3 +1,7 @@
 # Cadastro De Certificado
 # Squad 1
-## ...Em Desenvolvimento
+### Cassiano Simas
+### Cláudia Fagundes
+### Matheus Stantos 
+### João Ortiz
+### Tainá Leivas
